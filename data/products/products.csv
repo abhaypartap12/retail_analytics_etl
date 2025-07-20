@@ -1,0 +1,43 @@
+product_id,product_name,category,price
+101,Phone,Electronics,699
+102,Laptop,Electronics,999
+103,Headphones,Electronics,199
+104,Smartwatch,Electronics,249
+105,Tablet,Electronics,399
+106,Bluetooth Speaker,Electronics,149
+107,Refrigerator,Appliances,1199
+108,Washing Machine,Appliances,899
+109,Microwave Oven,Appliances,349
+110,Air Conditioner,Appliances,1499
+111,Sneakers,Fashion,129
+112,T-shirt,Fashion,25
+113,Jeans,Fashion,49
+114,Jacket,Fashion,89
+115,Office Chair,Furniture,199
+116,Dining Table,Furniture,599
+117,Bed Frame,Furniture,799
+118,Bookshelf,Furniture,179
+119,Running Shoes,Sports,99
+120,Yoga Mat,Sports,29
+121,Tennis Racket,Sports,159
+122,Football,Sports,39
+123,Basketball,Sports,35
+124,Treadmill,Sports,899
+125,Gaming Console,Electronics,499
+126,LED TV,Electronics,799
+127,Camera,Electronics,649
+128,Coffee Maker,Appliances,129
+129,Toaster,Appliances,49
+130,Hair Dryer,Appliances,59
+131,Sofa,Furniture,999
+132,Bookshelf,Furniture,149
+133,Nightstand,Furniture,89
+134,Blender,Appliances,79
+135,Luggage Bag,Fashion,99
+136,Winter Coat,Fashion,149
+137,Sunglasses,Fashion,59
+138,Water Bottle,Sports,19
+139,Cricket Bat,Sports,89
+140,Monitor,Electronics,199
+141,Keyboard,Electronics,69
+142,Mouse,Electronics,49

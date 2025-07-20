@@ -1,0 +1,7 @@
+confluent_kafka
+confluent-kafka
+delta-spark
+pandas
+pyarrow
+apache-airflow-providers-apache-spark
+

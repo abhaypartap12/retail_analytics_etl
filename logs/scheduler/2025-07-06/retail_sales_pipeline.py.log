@@ -1,0 +1,294 @@
+[2025-07-06T00:13:37.847+0000] {processor.py:153} INFO - Started process (PID=1433) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T00:13:37.863+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T00:13:37.865+0000] {logging_mixin.py:137} INFO - [2025-07-06T00:13:37.864+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T00:13:38.004+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T00:13:38.214+0000] {logging_mixin.py:137} INFO - [2025-07-06T00:13:38.214+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T00:13:38.325+0000] {logging_mixin.py:137} INFO - [2025-07-06T00:13:38.325+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T00:13:38.488+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.665 seconds
+[2025-07-06T01:53:16.570+0000] {processor.py:153} INFO - Started process (PID=1438) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T01:53:16.571+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T01:53:16.572+0000] {logging_mixin.py:137} INFO - [2025-07-06T01:53:16.572+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T01:53:16.611+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T01:53:16.779+0000] {logging_mixin.py:137} INFO - [2025-07-06T01:53:16.778+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T01:53:16.947+0000] {logging_mixin.py:137} INFO - [2025-07-06T01:53:16.947+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T01:53:17.045+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.482 seconds
+[2025-07-06T02:59:33.465+0000] {processor.py:153} INFO - Started process (PID=1445) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T02:59:33.466+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T02:59:33.470+0000] {logging_mixin.py:137} INFO - [2025-07-06T02:59:33.469+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T02:59:33.512+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T02:59:33.645+0000] {logging_mixin.py:137} INFO - [2025-07-06T02:59:33.645+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T02:59:33.692+0000] {logging_mixin.py:137} INFO - [2025-07-06T02:59:33.692+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T02:59:33.719+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.264 seconds
+[2025-07-06T03:31:48.307+0000] {processor.py:153} INFO - Started process (PID=1450) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T03:31:48.309+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T03:31:48.312+0000] {logging_mixin.py:137} INFO - [2025-07-06T03:31:48.311+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T03:31:48.393+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T03:31:48.656+0000] {logging_mixin.py:137} INFO - [2025-07-06T03:31:48.655+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T03:31:48.737+0000] {logging_mixin.py:137} INFO - [2025-07-06T03:31:48.737+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T03:31:48.845+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.548 seconds
+[2025-07-06T03:49:59.752+0000] {processor.py:153} INFO - Started process (PID=1455) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T03:49:59.753+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T03:49:59.754+0000] {logging_mixin.py:137} INFO - [2025-07-06T03:49:59.754+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T03:49:59.788+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T03:49:59.926+0000] {logging_mixin.py:137} INFO - [2025-07-06T03:49:59.925+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T03:49:59.973+0000] {logging_mixin.py:137} INFO - [2025-07-06T03:49:59.973+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T03:49:59.997+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.256 seconds
+[2025-07-06T04:41:03.008+0000] {processor.py:153} INFO - Started process (PID=1460) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T04:41:03.010+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T04:41:03.012+0000] {logging_mixin.py:137} INFO - [2025-07-06T04:41:03.012+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T04:41:03.063+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T04:41:03.183+0000] {logging_mixin.py:137} INFO - [2025-07-06T04:41:03.182+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T04:41:03.230+0000] {logging_mixin.py:137} INFO - [2025-07-06T04:41:03.230+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T04:41:03.259+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.259 seconds
+[2025-07-06T04:41:33.470+0000] {processor.py:153} INFO - Started process (PID=1465) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T04:41:33.472+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T04:41:33.473+0000] {logging_mixin.py:137} INFO - [2025-07-06T04:41:33.473+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T04:41:33.520+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T04:41:33.676+0000] {logging_mixin.py:137} INFO - [2025-07-06T04:41:33.675+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T04:41:33.725+0000] {logging_mixin.py:137} INFO - [2025-07-06T04:41:33.725+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T04:41:33.754+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.298 seconds
+[2025-07-06T05:03:11.773+0000] {processor.py:153} INFO - Started process (PID=1472) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T05:03:11.778+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T05:03:11.784+0000] {logging_mixin.py:137} INFO - [2025-07-06T05:03:11.784+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T05:03:12.108+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T05:03:12.451+0000] {logging_mixin.py:137} INFO - [2025-07-06T05:03:12.451+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T05:03:12.514+0000] {logging_mixin.py:137} INFO - [2025-07-06T05:03:12.513+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T05:03:12.549+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.817 seconds
+[2025-07-06T05:46:35.898+0000] {processor.py:153} INFO - Started process (PID=1477) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T05:46:35.899+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T05:46:35.902+0000] {logging_mixin.py:137} INFO - [2025-07-06T05:46:35.901+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T05:46:35.994+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T05:46:36.364+0000] {logging_mixin.py:137} INFO - [2025-07-06T05:46:36.363+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T05:46:36.452+0000] {logging_mixin.py:137} INFO - [2025-07-06T05:46:36.451+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T05:46:36.488+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.596 seconds
+[2025-07-06T06:35:13.747+0000] {processor.py:153} INFO - Started process (PID=1482) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T06:35:13.825+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T06:35:13.834+0000] {logging_mixin.py:137} INFO - [2025-07-06T06:35:13.833+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T06:35:14.107+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T06:35:14.316+0000] {logging_mixin.py:137} INFO - [2025-07-06T06:35:14.316+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T06:35:14.374+0000] {logging_mixin.py:137} INFO - [2025-07-06T06:35:14.374+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T06:35:14.420+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.806 seconds
+[2025-07-06T06:51:09.747+0000] {processor.py:153} INFO - Started process (PID=1489) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T06:51:09.750+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T06:51:09.754+0000] {logging_mixin.py:137} INFO - [2025-07-06T06:51:09.754+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T06:51:09.818+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T06:51:10.080+0000] {logging_mixin.py:137} INFO - [2025-07-06T06:51:10.079+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T06:51:10.164+0000] {logging_mixin.py:137} INFO - [2025-07-06T06:51:10.163+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T06:51:10.243+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.507 seconds
+[2025-07-06T07:13:16.292+0000] {processor.py:153} INFO - Started process (PID=1494) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T07:13:16.294+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T07:13:16.296+0000] {logging_mixin.py:137} INFO - [2025-07-06T07:13:16.296+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T07:13:16.332+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T07:13:16.469+0000] {logging_mixin.py:137} INFO - [2025-07-06T07:13:16.469+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T07:13:16.517+0000] {logging_mixin.py:137} INFO - [2025-07-06T07:13:16.516+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T07:13:16.543+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.257 seconds
+[2025-07-06T08:18:58.874+0000] {processor.py:153} INFO - Started process (PID=1499) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T08:18:58.876+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T08:18:58.877+0000] {logging_mixin.py:137} INFO - [2025-07-06T08:18:58.877+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T08:18:58.920+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T08:18:59.099+0000] {logging_mixin.py:137} INFO - [2025-07-06T08:18:59.098+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T08:18:59.293+0000] {logging_mixin.py:137} INFO - [2025-07-06T08:18:59.292+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T08:18:59.421+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.552 seconds
+[2025-07-06T09:31:53.830+0000] {processor.py:153} INFO - Started process (PID=1504) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T09:31:53.833+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T09:31:53.838+0000] {logging_mixin.py:137} INFO - [2025-07-06T09:31:53.837+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T09:31:53.917+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T09:31:54.193+0000] {logging_mixin.py:137} INFO - [2025-07-06T09:31:54.193+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T09:31:54.304+0000] {logging_mixin.py:137} INFO - [2025-07-06T09:31:54.304+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T09:31:54.334+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.512 seconds
+[2025-07-06T10:06:04.966+0000] {processor.py:153} INFO - Started process (PID=1509) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T10:06:04.968+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T10:06:04.970+0000] {logging_mixin.py:137} INFO - [2025-07-06T10:06:04.970+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T10:06:05.011+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T10:06:05.147+0000] {logging_mixin.py:137} INFO - [2025-07-06T10:06:05.147+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T10:06:05.200+0000] {logging_mixin.py:137} INFO - [2025-07-06T10:06:05.200+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T10:06:05.227+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.268 seconds
+[2025-07-06T10:24:02.675+0000] {processor.py:153} INFO - Started process (PID=1514) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T10:24:02.681+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T10:24:02.687+0000] {logging_mixin.py:137} INFO - [2025-07-06T10:24:02.685+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T10:24:02.774+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T10:24:03.104+0000] {logging_mixin.py:137} INFO - [2025-07-06T10:24:03.103+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T10:24:03.226+0000] {logging_mixin.py:137} INFO - [2025-07-06T10:24:03.225+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T10:24:03.271+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.606 seconds
+[2025-07-06T10:36:52.170+0000] {processor.py:153} INFO - Started process (PID=1521) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T10:36:52.171+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T10:36:52.172+0000] {logging_mixin.py:137} INFO - [2025-07-06T10:36:52.172+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T10:36:52.208+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T10:36:52.331+0000] {logging_mixin.py:137} INFO - [2025-07-06T10:36:52.331+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T10:36:52.374+0000] {logging_mixin.py:137} INFO - [2025-07-06T10:36:52.374+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T10:36:52.398+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.236 seconds
+[2025-07-06T10:54:34.186+0000] {processor.py:153} INFO - Started process (PID=1526) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T10:54:34.188+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T10:54:34.192+0000] {logging_mixin.py:137} INFO - [2025-07-06T10:54:34.191+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T10:54:34.262+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T10:54:34.509+0000] {logging_mixin.py:137} INFO - [2025-07-06T10:54:34.509+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T10:54:34.587+0000] {logging_mixin.py:137} INFO - [2025-07-06T10:54:34.587+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T10:54:34.659+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.481 seconds
+[2025-07-06T11:33:04.693+0000] {processor.py:153} INFO - Started process (PID=1531) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T11:33:04.694+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T11:33:04.695+0000] {logging_mixin.py:137} INFO - [2025-07-06T11:33:04.695+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T11:33:04.736+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T11:33:04.862+0000] {logging_mixin.py:137} INFO - [2025-07-06T11:33:04.862+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T11:33:04.959+0000] {logging_mixin.py:137} INFO - [2025-07-06T11:33:04.958+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T11:33:05.078+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.389 seconds
+[2025-07-06T11:51:00.028+0000] {processor.py:153} INFO - Started process (PID=1536) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T11:51:00.030+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T11:51:00.031+0000] {logging_mixin.py:137} INFO - [2025-07-06T11:51:00.031+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T11:51:00.074+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T11:51:00.223+0000] {logging_mixin.py:137} INFO - [2025-07-06T11:51:00.222+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T11:51:00.272+0000] {logging_mixin.py:137} INFO - [2025-07-06T11:51:00.271+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T11:51:00.303+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.285 seconds
+[2025-07-06T12:07:36.313+0000] {processor.py:153} INFO - Started process (PID=1541) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T12:07:36.316+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T12:07:36.318+0000] {logging_mixin.py:137} INFO - [2025-07-06T12:07:36.318+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T12:07:36.386+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T12:07:36.555+0000] {logging_mixin.py:137} INFO - [2025-07-06T12:07:36.555+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T12:07:36.610+0000] {logging_mixin.py:137} INFO - [2025-07-06T12:07:36.610+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T12:07:36.646+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.346 seconds
+[2025-07-06T12:47:45.488+0000] {processor.py:153} INFO - Started process (PID=1546) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T12:47:45.491+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T12:47:45.493+0000] {logging_mixin.py:137} INFO - [2025-07-06T12:47:45.492+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T12:47:45.576+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T12:47:46.161+0000] {logging_mixin.py:137} INFO - [2025-07-06T12:47:46.160+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T12:47:46.232+0000] {logging_mixin.py:137} INFO - [2025-07-06T12:47:46.232+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T12:47:46.288+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.811 seconds
+[2025-07-06T13:13:01.947+0000] {processor.py:153} INFO - Started process (PID=1553) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:13:01.948+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T13:13:01.949+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:13:01.949+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:13:01.994+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:13:02.232+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:13:02.231+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T13:13:02.410+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:13:02.410+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T13:13:02.454+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.516 seconds
+[2025-07-06T13:23:19.023+0000] {processor.py:153} INFO - Started process (PID=1558) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:23:19.026+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T13:23:19.030+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:23:19.029+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:23:19.139+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:23:19.453+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:23:19.452+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T13:23:19.539+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:23:19.539+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T13:23:19.619+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.608 seconds
+[2025-07-06T13:41:37.877+0000] {processor.py:153} INFO - Started process (PID=1563) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:41:37.879+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T13:41:37.880+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:41:37.880+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:41:37.925+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:41:38.121+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:41:38.121+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T13:41:38.174+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:41:38.174+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T13:41:38.206+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.340 seconds
+[2025-07-06T13:42:19.781+0000] {processor.py:153} INFO - Started process (PID=1568) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:42:19.784+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T13:42:19.786+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:42:19.785+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:42:19.839+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:42:19.988+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:42:19.988+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T13:42:20.038+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:42:20.038+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T13:42:20.063+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.294 seconds
+[2025-07-06T13:57:27.905+0000] {processor.py:153} INFO - Started process (PID=1575) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:57:27.907+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T13:57:27.912+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:57:27.911+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:57:28.020+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T13:57:28.284+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:57:28.283+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T13:57:28.385+0000] {logging_mixin.py:137} INFO - [2025-07-06T13:57:28.384+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T13:57:28.457+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.571 seconds
+[2025-07-06T14:03:51.512+0000] {processor.py:153} INFO - Started process (PID=1580) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:03:51.514+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T14:03:51.515+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:03:51.515+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:03:51.578+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:03:51.887+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:03:51.886+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T14:03:51.983+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:03:51.982+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T14:03:52.071+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.569 seconds
+[2025-07-06T14:22:26.944+0000] {processor.py:153} INFO - Started process (PID=1585) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:22:26.946+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T14:22:26.948+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:22:26.948+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:22:26.995+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:22:27.147+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:22:27.147+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T14:22:27.213+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:22:27.213+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T14:22:27.309+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.370 seconds
+[2025-07-06T14:33:20.428+0000] {processor.py:153} INFO - Started process (PID=1590) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:33:20.430+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T14:33:20.432+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:33:20.432+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:33:20.507+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:33:20.659+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:33:20.659+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T14:33:20.713+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:33:20.713+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T14:33:20.741+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.323 seconds
+[2025-07-06T14:46:16.453+0000] {processor.py:153} INFO - Started process (PID=1595) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:46:16.456+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T14:46:16.457+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:46:16.457+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:46:16.568+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:46:17.167+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:46:17.160+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T14:46:17.290+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:46:17.290+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T14:46:17.343+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.904 seconds
+[2025-07-06T14:54:58.680+0000] {processor.py:153} INFO - Started process (PID=1602) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:54:58.684+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T14:54:58.688+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:54:58.688+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:54:58.771+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T14:54:59.035+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:54:59.034+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T14:54:59.124+0000] {logging_mixin.py:137} INFO - [2025-07-06T14:54:59.123+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T14:54:59.301+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.630 seconds
+[2025-07-06T15:10:42.437+0000] {processor.py:153} INFO - Started process (PID=1607) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T15:10:42.441+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T15:10:42.444+0000] {logging_mixin.py:137} INFO - [2025-07-06T15:10:42.442+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T15:10:42.613+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T15:10:42.985+0000] {logging_mixin.py:137} INFO - [2025-07-06T15:10:42.984+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T15:10:43.287+0000] {logging_mixin.py:137} INFO - [2025-07-06T15:10:43.285+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T15:10:43.396+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.970 seconds
+[2025-07-06T16:24:20.345+0000] {processor.py:153} INFO - Started process (PID=1612) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T16:24:20.349+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T16:24:20.352+0000] {logging_mixin.py:137} INFO - [2025-07-06T16:24:20.352+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T16:24:20.426+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T16:24:20.666+0000] {logging_mixin.py:137} INFO - [2025-07-06T16:24:20.665+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T16:24:20.746+0000] {logging_mixin.py:137} INFO - [2025-07-06T16:24:20.746+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T16:24:20.820+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.484 seconds
+[2025-07-06T17:46:52.122+0000] {processor.py:153} INFO - Started process (PID=1619) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T17:46:52.130+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T17:46:52.135+0000] {logging_mixin.py:137} INFO - [2025-07-06T17:46:52.134+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T17:46:52.335+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T17:46:52.825+0000] {logging_mixin.py:137} INFO - [2025-07-06T17:46:52.824+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T17:46:53.167+0000] {logging_mixin.py:137} INFO - [2025-07-06T17:46:53.167+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T17:46:53.271+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 1.168 seconds
+[2025-07-06T19:14:34.347+0000] {processor.py:153} INFO - Started process (PID=1624) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T19:14:34.350+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T19:14:34.354+0000] {logging_mixin.py:137} INFO - [2025-07-06T19:14:34.354+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T19:14:34.444+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T19:14:34.809+0000] {logging_mixin.py:137} INFO - [2025-07-06T19:14:34.808+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T19:14:35.023+0000] {logging_mixin.py:137} INFO - [2025-07-06T19:14:35.019+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T19:14:35.102+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.766 seconds
+[2025-07-06T19:43:02.177+0000] {processor.py:153} INFO - Started process (PID=1629) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T19:43:02.182+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T19:43:02.184+0000] {logging_mixin.py:137} INFO - [2025-07-06T19:43:02.184+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T19:43:02.264+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T19:43:02.539+0000] {logging_mixin.py:137} INFO - [2025-07-06T19:43:02.538+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T19:43:02.690+0000] {logging_mixin.py:137} INFO - [2025-07-06T19:43:02.689+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T19:43:02.969+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.801 seconds
+[2025-07-06T20:06:27.781+0000] {processor.py:153} INFO - Started process (PID=1636) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T20:06:27.783+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T20:06:27.785+0000] {logging_mixin.py:137} INFO - [2025-07-06T20:06:27.784+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T20:06:27.931+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T20:06:28.822+0000] {logging_mixin.py:137} INFO - [2025-07-06T20:06:28.819+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T20:06:28.933+0000] {logging_mixin.py:137} INFO - [2025-07-06T20:06:28.933+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T20:06:28.974+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 1.201 seconds
+[2025-07-06T20:53:20.841+0000] {processor.py:153} INFO - Started process (PID=1641) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T20:53:20.842+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T20:53:20.843+0000] {logging_mixin.py:137} INFO - [2025-07-06T20:53:20.843+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T20:53:20.895+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T20:53:21.055+0000] {logging_mixin.py:137} INFO - [2025-07-06T20:53:21.055+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T20:53:21.111+0000] {logging_mixin.py:137} INFO - [2025-07-06T20:53:21.111+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T20:53:21.146+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.313 seconds
+[2025-07-06T22:07:45.738+0000] {processor.py:153} INFO - Started process (PID=1646) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T22:07:45.740+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T22:07:45.741+0000] {logging_mixin.py:137} INFO - [2025-07-06T22:07:45.741+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T22:07:45.782+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T22:07:45.912+0000] {logging_mixin.py:137} INFO - [2025-07-06T22:07:45.912+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T22:07:45.962+0000] {logging_mixin.py:137} INFO - [2025-07-06T22:07:45.961+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T22:07:45.991+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.259 seconds
+[2025-07-06T22:40:50.723+0000] {processor.py:153} INFO - Started process (PID=1651) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T22:40:50.726+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T22:40:50.726+0000] {logging_mixin.py:137} INFO - [2025-07-06T22:40:50.726+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T22:40:50.861+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T22:40:51.187+0000] {logging_mixin.py:137} INFO - [2025-07-06T22:40:51.185+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T22:40:51.319+0000] {logging_mixin.py:137} INFO - [2025-07-06T22:40:51.318+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T22:40:51.409+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.693 seconds
+[2025-07-06T22:59:17.013+0000] {processor.py:153} INFO - Started process (PID=1656) to work on /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T22:59:17.016+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/retail_sales_pipeline.py for tasks to queue
+[2025-07-06T22:59:17.018+0000] {logging_mixin.py:137} INFO - [2025-07-06T22:59:17.018+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T22:59:17.055+0000] {processor.py:753} INFO - DAG(s) dict_keys(['retail_sales_pipeline']) retrieved from /opt/airflow/dags/retail_sales_pipeline.py
+[2025-07-06T22:59:17.310+0000] {logging_mixin.py:137} INFO - [2025-07-06T22:59:17.309+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2025-07-06T22:59:17.447+0000] {logging_mixin.py:137} INFO - [2025-07-06T22:59:17.446+0000] {dag.py:3427} INFO - Setting next_dagrun for retail_sales_pipeline to None, run_after=None
+[2025-07-06T22:59:17.529+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/retail_sales_pipeline.py took 0.522 seconds

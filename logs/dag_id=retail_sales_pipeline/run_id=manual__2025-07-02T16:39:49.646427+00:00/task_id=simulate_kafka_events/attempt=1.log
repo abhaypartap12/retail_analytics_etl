@@ -1,0 +1,77 @@
+[2025-07-02T16:39:53.798+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: retail_sales_pipeline.simulate_kafka_events manual__2025-07-02T16:39:49.646427+00:00 [queued]>
+[2025-07-02T16:39:53.885+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: retail_sales_pipeline.simulate_kafka_events manual__2025-07-02T16:39:49.646427+00:00 [queued]>
+[2025-07-02T16:39:53.888+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-02T16:39:53.889+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2025-07-02T16:39:53.890+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-02T16:39:53.969+0000] {taskinstance.py:1304} INFO - Executing <Task(BashOperator): simulate_kafka_events> on 2025-07-02 16:39:49.646427+00:00
+[2025-07-02T16:39:54.012+0000] {standard_task_runner.py:55} INFO - Started process 1298 to run task
+[2025-07-02T16:39:54.033+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'retail_sales_pipeline', 'simulate_kafka_events', 'manual__2025-07-02T16:39:49.646427+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/retail_sales_pipeline.py', '--cfg-path', '/tmp/tmpdgv4xxt2']
+[2025-07-02T16:39:54.039+0000] {standard_task_runner.py:83} INFO - Job 22: Subtask simulate_kafka_events
+[2025-07-02T16:39:54.743+0000] {task_command.py:389} INFO - Running <TaskInstance: retail_sales_pipeline.simulate_kafka_events manual__2025-07-02T16:39:49.646427+00:00 [running]> on host febdae18cce2
+[2025-07-02T16:39:56.061+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=retail_sales_pipeline
+AIRFLOW_CTX_TASK_ID=simulate_kafka_events
+AIRFLOW_CTX_EXECUTION_DATE=2025-07-02T16:39:49.646427+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-07-02T16:39:49.646427+00:00
+[2025-07-02T16:39:56.081+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-07-02T16:39:56.101+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n        python3 /opt/***/scripts/ingestion/kafka_producer.py\n        ']
+[2025-07-02T16:39:56.251+0000] {subprocess.py:86} INFO - Output:
+[2025-07-02T16:40:47.918+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 300
+[2025-07-02T16:40:47.934+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 301
+[2025-07-02T16:40:47.934+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 302
+[2025-07-02T16:40:47.934+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 303
+[2025-07-02T16:40:47.935+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 304
+[2025-07-02T16:40:47.935+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 305
+[2025-07-02T16:40:47.935+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 306
+[2025-07-02T16:40:47.935+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 307
+[2025-07-02T16:40:47.936+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 308
+[2025-07-02T16:40:47.936+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 309
+[2025-07-02T16:40:47.936+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 310
+[2025-07-02T16:40:47.936+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 311
+[2025-07-02T16:40:47.936+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 312
+[2025-07-02T16:40:47.936+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 313
+[2025-07-02T16:40:47.937+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 314
+[2025-07-02T16:40:47.937+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 315
+[2025-07-02T16:40:47.937+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 316
+[2025-07-02T16:40:47.937+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 317
+[2025-07-02T16:40:47.937+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 318
+[2025-07-02T16:40:47.938+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 319
+[2025-07-02T16:40:47.938+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 320
+[2025-07-02T16:40:47.938+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 321
+[2025-07-02T16:40:47.938+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 322
+[2025-07-02T16:40:47.938+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 323
+[2025-07-02T16:40:47.939+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 324
+[2025-07-02T16:40:47.939+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 325
+[2025-07-02T16:40:47.939+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 326
+[2025-07-02T16:40:47.939+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 327
+[2025-07-02T16:40:47.939+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 328
+[2025-07-02T16:40:47.939+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 329
+[2025-07-02T16:40:47.939+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 330
+[2025-07-02T16:40:47.940+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 331
+[2025-07-02T16:40:47.940+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 332
+[2025-07-02T16:40:47.940+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 333
+[2025-07-02T16:40:47.941+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 334
+[2025-07-02T16:40:47.942+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 335
+[2025-07-02T16:40:47.942+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 336
+[2025-07-02T16:40:47.942+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 337
+[2025-07-02T16:40:47.942+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 338
+[2025-07-02T16:40:47.943+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 339
+[2025-07-02T16:40:47.943+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 340
+[2025-07-02T16:40:47.944+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 341
+[2025-07-02T16:40:47.945+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 342
+[2025-07-02T16:40:47.945+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 343
+[2025-07-02T16:40:47.945+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 344
+[2025-07-02T16:40:47.946+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 345
+[2025-07-02T16:40:47.946+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 346
+[2025-07-02T16:40:47.946+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 347
+[2025-07-02T16:40:47.947+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 348
+[2025-07-02T16:40:47.947+0000] {subprocess.py:93} INFO - Record successfully produced to transaction-events [0] at offset 349
+[2025-07-02T16:40:47.979+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-07-02T16:40:48.386+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=retail_sales_pipeline, task_id=simulate_kafka_events, execution_date=20250702T163949, start_date=20250702T163953, end_date=20250702T164048
+[2025-07-02T16:40:48.615+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2025-07-02T16:40:48.892+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

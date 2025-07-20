@@ -1,0 +1,205 @@
+services:
+  # Superset - Visualisation Tool
+  superset:
+    build:
+      context: .
+      dockerfile: docker/superset/Dockerfile
+    image: custom-superset:latest
+    container_name: superset
+    ports:
+      - "8088:8088"
+    environment:
+      SUPERSET_SECRET_KEY: "qxBy6E3D8YcHWhgJe63E2hrnqSp+K51OryLvdSc+ug=="
+    depends_on:
+      - postgres
+    volumes:
+      - superset_home:/app/superset_home
+      - ./dashboards:/app/dashboards/
+    command: >
+      bash -c "superset db upgrade &&
+               superset fab create-admin --username admin --firstname Superset --lastname Admin --email admin@superset.com --password admin &&
+               superset init &&
+               superset run -h 0.0.0.0 -p 8088"
+
+
+  # Kafdrop - Kafka UI
+  kafdrop:
+    image: obsidiandynamics/kafdrop:latest
+    container_name: kafdrop
+    ports:
+      - "9000:9000"
+    environment:
+      - KAFKA_BROKERCONNECT=kafka:9093
+      - JVM_OPTS=-Xms32M -Xmx64M
+    depends_on:
+      - kafka
+    platform: linux/amd64
+
+  # Kafka Broker
+  kafka:
+    image: wurstmeister/kafka:latest
+    container_name: kafka
+    environment:
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9093
+      - KAFKA_LISTENER_SECURITY_PROTOCOL=PLAINTEXT
+      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9093
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+    ports:
+      - "9093:9093"
+    depends_on:
+      - zookeeper
+    platform: linux/amd64
+
+  # Zookeeper
+  zookeeper:
+    image: wurstmeister/zookeeper:latest
+    container_name: zookeeper
+    environment:
+      - ZOOKEEPER_CLIENT_PORT=2181
+      - ZOOKEEPER_TICK_TIME=2000
+    ports:
+      - "2181:2181"
+    platform: linux/amd64
+
+  spark-master:
+    build:
+      context: .
+      dockerfile: docker/spark/Dockerfile  # custom build
+    image: custom-spark:latest
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_MASTER_HOST=spark-master
+      - SPARK_MASTER_PORT=7077
+      - SPARK_UI_PORT=8080
+    ports:
+      - "7077:7077"
+      - "8080:8080"
+    depends_on:
+      - kafka
+    platform: linux/amd64
+    volumes:
+      - ./scripts:/opt/airflow/scripts
+      - ./data:/opt/airflow/data
+
+  spark-worker:
+    build:
+      context: .
+      dockerfile: docker/spark/Dockerfile  # custom build
+    image: custom-spark:latest
+    container_name: spark-worker
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER=spark://spark-master:7077
+    depends_on:
+      - spark-master
+    platform: linux/amd64
+    volumes:
+      - ./scripts:/opt/airflow/scripts
+      - ./data:/opt/airflow/data
+
+  airflow-webserver:
+    build:
+      context: .
+      dockerfile: docker/airflow/Dockerfile
+    image: custom-airflow-webserver:latest
+    platform: linux/amd64
+    restart: always
+    environment:
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__WEBSERVER__WORKERS=4
+      - AIRFLOW__WEBSERVER__WORKER_TIMEOUT=120
+      - AIRFLOW__WEBSERVER__SECRET_KEY=qxBy6E3D8YcHWhgJe63E2hrnqSp+K51OryLvdSc+ug==
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 10s
+      retries: 20
+    ports:
+      - "8081:8080"
+    depends_on:
+      - postgres
+    command: >
+        bash -c "
+          airflow webserver &
+
+          echo '⌛ Waiting for Airflow webserver to be healthy...';
+          until curl -sf http://localhost:8080/health; do
+            sleep 5;
+          done
+
+          echo '✅ Webserver healthy. Unpausing and triggering DAG...';
+          airflow dags unpause retail_sales_pipeline || echo '⚠️ DAG already unpaused or not found';
+          airflow dags trigger retail_sales_pipeline || echo '⚠️ DAG might already be triggered';
+
+          # Keep container running
+          tail -f /dev/null
+        "
+    networks:
+      - default
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - ./data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  airflow-scheduler:
+    build:
+      context: .
+      dockerfile: docker/airflow/Dockerfile
+    image: custom-airflow-scheduler:latest
+    platform: linux/amd64
+    restart: always
+    command: scheduler 
+    environment:
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__WEBSERVER__SECRET_KEY=qxBy6E3D8YcHWhgJe63E2hrnqSp+K51OryLvdSc+ug==
+    depends_on:
+      - postgres
+    networks:
+      - default
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - ./data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  # airflow-worker:
+  #   build:
+  #     context: .
+  #     dockerfile: docker/airflow/Dockerfile
+  #   image: custom-airflow-worker:latest
+  #   platform: linux/amd64
+  #   restart: always
+  #   command: celery worker
+  #   environment:
+  #     - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+  #     - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+  #   depends_on:
+  #     - postgres
+  #   networks:
+  #     - default
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    ports:
+      - "5432:5432"
+    platform: linux/amd64
+
+networks:
+  default:
+    driver: bridge
+
+volumes:
+  superset_home:
+
+

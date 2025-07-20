@@ -1,0 +1,84 @@
+[2025-07-20T09:19:10.124+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: retail_sales_pipeline.bootstrap_superset manual__2025-07-20T09:06:15.055327+00:00 [queued]>
+[2025-07-20T09:19:10.141+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: retail_sales_pipeline.bootstrap_superset manual__2025-07-20T09:06:15.055327+00:00 [queued]>
+[2025-07-20T09:19:10.141+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-20T09:19:10.141+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2025-07-20T09:19:10.141+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-20T09:19:10.164+0000] {taskinstance.py:1304} INFO - Executing <Task(BashOperator): bootstrap_superset> on 2025-07-20 09:06:15.055327+00:00
+[2025-07-20T09:19:10.169+0000] {standard_task_runner.py:55} INFO - Started process 460 to run task
+[2025-07-20T09:19:10.179+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'retail_sales_pipeline', 'bootstrap_superset', 'manual__2025-07-20T09:06:15.055327+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/retail_sales_pipeline.py', '--cfg-path', '/tmp/tmp2tgsbloa']
+[2025-07-20T09:19:10.183+0000] {standard_task_runner.py:83} INFO - Job 7: Subtask bootstrap_superset
+[2025-07-20T09:19:10.491+0000] {task_command.py:389} INFO - Running <TaskInstance: retail_sales_pipeline.bootstrap_superset manual__2025-07-20T09:06:15.055327+00:00 [running]> on host fbabcc26ebe4
+[2025-07-20T09:19:10.763+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=retail_sales_pipeline
+AIRFLOW_CTX_TASK_ID=bootstrap_superset
+AIRFLOW_CTX_EXECUTION_DATE=2025-07-20T09:06:15.055327+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-07-20T09:06:15.055327+00:00
+[2025-07-20T09:19:10.765+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-07-20T09:19:10.766+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n        docker exec superset python /app/dashboards/init_superset.py\n        ']
+[2025-07-20T09:19:10.774+0000] {subprocess.py:86} INFO - Output:
+[2025-07-20T09:19:13.014+0000] {subprocess.py:93} INFO - /app/superset/config.py:42: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[2025-07-20T09:19:13.017+0000] {subprocess.py:93} INFO -   import pkg_resources
+[2025-07-20T09:19:13.062+0000] {subprocess.py:93} INFO - /usr/local/lib/python3.10/site-packages/flask_limiter/extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+[2025-07-20T09:19:13.062+0000] {subprocess.py:93} INFO -   warnings.warn(
+[2025-07-20T09:19:13.187+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:13,187:INFO:superset.utils.screenshots:No PIL installation found
+[2025-07-20T09:19:13.509+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:13,508:INFO:superset.utils.pdf:No PIL installation found
+[2025-07-20T09:19:15.102+0000] {subprocess.py:93} INFO - /app/superset/config.py:42: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[2025-07-20T09:19:15.105+0000] {subprocess.py:93} INFO -   import pkg_resources
+[2025-07-20T09:19:15.258+0000] {subprocess.py:93} INFO - /usr/local/lib/python3.10/site-packages/flask_limiter/extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+[2025-07-20T09:19:15.259+0000] {subprocess.py:93} INFO -   warnings.warn(
+[2025-07-20T09:19:15.379+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:15,370:INFO:superset.utils.screenshots:No PIL installation found
+[2025-07-20T09:19:15.696+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:15,695:INFO:superset.utils.pdf:No PIL installation found
+[2025-07-20T09:19:16.042+0000] {subprocess.py:93} INFO - /app/superset/commands/importers/v1/utils.py:113: SAWarning: TypeDecorator EncryptedType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2025-07-20T09:19:16.043+0000] {subprocess.py:93} INFO -   for uuid, password in db.session.query(Database.uuid, Database.password).all()
+[2025-07-20T09:19:16.044+0000] {subprocess.py:93} INFO - /app/superset/commands/importers/v1/utils.py:118: SAWarning: TypeDecorator EncryptedType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2025-07-20T09:19:16.044+0000] {subprocess.py:93} INFO -   for uuid, password in db.session.query(SSHTunnel.uuid, SSHTunnel.password).all()
+[2025-07-20T09:19:16.044+0000] {subprocess.py:93} INFO - /app/superset/commands/importers/v1/utils.py:125: SAWarning: TypeDecorator EncryptedType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2025-07-20T09:19:16.044+0000] {subprocess.py:93} INFO -   ).all()
+[2025-07-20T09:19:16.045+0000] {subprocess.py:93} INFO - /app/superset/commands/importers/v1/utils.py:132: SAWarning: TypeDecorator EncryptedType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2025-07-20T09:19:16.045+0000] {subprocess.py:93} INFO -   ).all()
+[2025-07-20T09:19:16.102+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,101:INFO:superset.models.helpers:Importing new tables public.delta_sales
+[2025-07-20T09:19:16.106+0000] {subprocess.py:93} INFO - /app/superset/connectors/sqla/models.py:2090: SAWarning: Usage of the 'related attribute set' operation is not currently supported within the execution stage of the flush process. Results may not be consistent.  Consider using alternative event listeners or connection-level operations instead.
+[2025-07-20T09:19:16.106+0000] {subprocess.py:93} INFO -   self.database = session.query(Database).filter_by(id=self.database_id).one()
+[2025-07-20T09:19:16.106+0000] {subprocess.py:93} INFO - /app/superset/connectors/sqla/models.py:2090: SAWarning: Usage of the 'collection append' operation is not currently supported within the execution stage of the flush process. Results may not be consistent.  Consider using alternative event listeners or connection-level operations instead.
+[2025-07-20T09:19:16.106+0000] {subprocess.py:93} INFO -   self.database = session.query(Database).filter_by(id=self.database_id).one()
+[2025-07-20T09:19:16.112+0000] {subprocess.py:93} INFO - /app/superset/models/helpers.py:318: SAWarning: Attribute history events accumulated on 1 previously clean instances within inner-flush event handlers have been reset, and will not result in database updates. Consider using set_committed_value() within inner-flush event handlers to avoid this warning.
+[2025-07-20T09:19:16.112+0000] {subprocess.py:93} INFO -   obj = obj_query.one_or_none()
+[2025-07-20T09:19:16.113+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,113:INFO:superset.models.helpers:Importing new sql_metrics count
+[2025-07-20T09:19:16.121+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,120:INFO:superset.models.helpers:Importing new table_columns sale_timestamp
+[2025-07-20T09:19:16.123+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,123:INFO:superset.models.helpers:Importing new table_columns signup_date
+[2025-07-20T09:19:16.124+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,124:INFO:superset.models.helpers:Importing new table_columns product_id
+[2025-07-20T09:19:16.125+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,125:INFO:superset.models.helpers:Importing new table_columns customer_id
+[2025-07-20T09:19:16.126+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,126:INFO:superset.models.helpers:Importing new table_columns quantity
+[2025-07-20T09:19:16.127+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,127:INFO:superset.models.helpers:Importing new table_columns price
+[2025-07-20T09:19:16.128+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,128:INFO:superset.models.helpers:Importing new table_columns sale_hash
+[2025-07-20T09:19:16.129+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,128:INFO:superset.models.helpers:Importing new table_columns last_name
+[2025-07-20T09:19:16.130+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,129:INFO:superset.models.helpers:Importing new table_columns product_name
+[2025-07-20T09:19:16.131+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,130:INFO:superset.models.helpers:Importing new table_columns sale_id
+[2025-07-20T09:19:16.132+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,131:INFO:superset.models.helpers:Importing new table_columns first_name
+[2025-07-20T09:19:16.132+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,132:INFO:superset.models.helpers:Importing new table_columns category
+[2025-07-20T09:19:16.133+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,133:INFO:superset.models.helpers:Importing new table_columns email
+[2025-07-20T09:19:16.253+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,252:INFO:superset.models.helpers:Importing new slices Total Quantity Sold
+[2025-07-20T09:19:16.260+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,259:INFO:superset.models.helpers:Importing new slices Total Sales Revenue
+[2025-07-20T09:19:16.264+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,263:INFO:superset.models.helpers:Importing new slices Sales Over Time
+[2025-07-20T09:19:16.268+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,267:INFO:superset.models.helpers:Importing new slices Average Order Value
+[2025-07-20T09:19:16.271+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,270:INFO:superset.models.helpers:Importing new slices Top 5 Products Revenue
+[2025-07-20T09:19:16.274+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,273:INFO:superset.models.helpers:Importing new slices Product Revenue Breakdown
+[2025-07-20T09:19:16.279+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,278:INFO:superset.models.helpers:Importing new slices Category Revenue Breakdown
+[2025-07-20T09:19:16.283+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,282:INFO:superset.models.helpers:Importing new slices Customer Revenue Breakdown
+[2025-07-20T09:19:16.289+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,287:INFO:superset.models.helpers:Importing new slices Sales Density by Category
+[2025-07-20T09:19:16.295+0000] {subprocess.py:93} INFO - 2025-07-20 09:19:16,294:INFO:superset.models.helpers:Importing new dashboards Dashboard<None>
+[2025-07-20T09:19:16.795+0000] {subprocess.py:93} INFO - ✅ Flask app context loaded.
+[2025-07-20T09:19:16.800+0000] {subprocess.py:93} INFO - 🔗 Creating new database connection with fixed UUID...
+[2025-07-20T09:19:16.801+0000] {subprocess.py:93} INFO - ✅ Database registered.
+[2025-07-20T09:19:16.801+0000] {subprocess.py:93} INFO - ⚠️ Dataset folder not found, skipping dataset import.
+[2025-07-20T09:19:16.801+0000] {subprocess.py:93} INFO - 📦 Importing dashboards...
+[2025-07-20T09:19:16.802+0000] {subprocess.py:93} INFO - ✅ Dashboards imported successfully.
+[2025-07-20T09:19:17.468+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-07-20T09:19:17.724+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=retail_sales_pipeline, task_id=bootstrap_superset, execution_date=20250720T090615, start_date=20250720T091910, end_date=20250720T091917
+[2025-07-20T09:19:17.799+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2025-07-20T09:19:17.938+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

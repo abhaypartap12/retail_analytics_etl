@@ -1,0 +1,40 @@
+[2025-07-02T16:46:09.749+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: retail_sales_pipeline.run_spark_job manual__2025-07-02T16:39:49.646427+00:00 [queued]>
+[2025-07-02T16:46:09.816+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: retail_sales_pipeline.run_spark_job manual__2025-07-02T16:39:49.646427+00:00 [queued]>
+[2025-07-02T16:46:09.818+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-02T16:46:09.819+0000] {taskinstance.py:1284} INFO - Starting attempt 2 of 2
+[2025-07-02T16:46:09.820+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-02T16:46:09.891+0000] {taskinstance.py:1304} INFO - Executing <Task(BashOperator): run_spark_job> on 2025-07-02 16:39:49.646427+00:00
+[2025-07-02T16:46:09.939+0000] {standard_task_runner.py:55} INFO - Started process 1380 to run task
+[2025-07-02T16:46:09.947+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'retail_sales_pipeline', 'run_spark_job', 'manual__2025-07-02T16:39:49.646427+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/retail_sales_pipeline.py', '--cfg-path', '/tmp/tmp1qrloi4w']
+[2025-07-02T16:46:09.949+0000] {standard_task_runner.py:83} INFO - Job 24: Subtask run_spark_job
+[2025-07-02T16:46:10.749+0000] {task_command.py:389} INFO - Running <TaskInstance: retail_sales_pipeline.run_spark_job manual__2025-07-02T16:39:49.646427+00:00 [running]> on host febdae18cce2
+[2025-07-02T16:46:11.587+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=retail_sales_pipeline
+AIRFLOW_CTX_TASK_ID=run_spark_job
+AIRFLOW_CTX_EXECUTION_DATE=2025-07-02T16:39:49.646427+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-07-02T16:39:49.646427+00:00
+[2025-07-02T16:46:11.593+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-07-02T16:46:11.596+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n        docker exec spark-master /opt/bitnami/spark/bin/spark-submit             --master spark://spark-master:7077             --jars /opt/bitnami/spark/jars/spark-sql-kafka-0-10_2.12-3.5.5.jar,/opt/bitnami/spark/jars/kafka-clients-3.5.1.jar,/opt/bitnami/spark/jars/kafka_2.12-3.5.1.jar,/opt/bitnami/spark/jars/commons-pool2-2.11.1.jar,/opt/bitnami/spark/jars/delta-spark_2.12-3.0.0.jar,/opt/bitnami/spark/jars/delta-storage-3.0.0.jar,/opt/bitnami/spark/jars/spark-token-provider-kafka-0-10_2.12-3.5.5.jar             /opt/***/scripts/transformation/process_sales.py\n        ']
+[2025-07-02T16:46:11.641+0000] {subprocess.py:86} INFO - Output:
+[2025-07-02T16:46:25.260+0000] {subprocess.py:93} INFO - 25/07/02 16:46:25 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-07-02T16:46:31.750+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-07-02T16:46:31.764+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/transformation/process_sales.py", line 4, in <module>
+[2025-07-02T16:46:31.764+0000] {subprocess.py:93} INFO -     from delta.tables import DeltaTable
+[2025-07-02T16:46:31.765+0000] {subprocess.py:93} INFO - ModuleNotFoundError: No module named 'delta'
+[2025-07-02T16:46:32.110+0000] {subprocess.py:93} INFO - 25/07/02 16:46:32 INFO ShutdownHookManager: Shutdown hook called
+[2025-07-02T16:46:32.115+0000] {subprocess.py:93} INFO - 25/07/02 16:46:32 INFO ShutdownHookManager: Deleting directory /tmp/spark-2b8b4f5b-9705-4e3e-aa98-3acc7c2a19d9
+[2025-07-02T16:46:32.740+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-07-02T16:46:33.274+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-07-02T16:46:33.391+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=retail_sales_pipeline, task_id=run_spark_job, execution_date=20250702T163949, start_date=20250702T164609, end_date=20250702T164633
+[2025-07-02T16:46:33.586+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 24 for task run_spark_job (Bash command failed. The command returned a non-zero exit code 1.; 1380)
+[2025-07-02T16:46:33.713+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2025-07-02T16:46:33.947+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

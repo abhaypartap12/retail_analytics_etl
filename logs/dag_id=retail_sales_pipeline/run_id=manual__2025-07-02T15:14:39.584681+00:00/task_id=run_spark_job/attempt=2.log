@@ -1,0 +1,676 @@
+[2025-07-02T15:22:48.920+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: retail_sales_pipeline.run_spark_job manual__2025-07-02T15:14:39.584681+00:00 [queued]>
+[2025-07-02T15:22:48.966+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: retail_sales_pipeline.run_spark_job manual__2025-07-02T15:14:39.584681+00:00 [queued]>
+[2025-07-02T15:22:48.967+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-02T15:22:48.967+0000] {taskinstance.py:1284} INFO - Starting attempt 2 of 3
+[2025-07-02T15:22:48.967+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-02T15:22:49.073+0000] {taskinstance.py:1304} INFO - Executing <Task(BashOperator): run_spark_job> on 2025-07-02 15:14:39.584681+00:00
+[2025-07-02T15:22:49.123+0000] {standard_task_runner.py:55} INFO - Started process 502 to run task
+[2025-07-02T15:22:49.138+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'retail_sales_pipeline', 'run_spark_job', 'manual__2025-07-02T15:14:39.584681+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/retail_sales_pipeline.py', '--cfg-path', '/tmp/tmpog7hmw76']
+[2025-07-02T15:22:49.147+0000] {standard_task_runner.py:83} INFO - Job 13: Subtask run_spark_job
+[2025-07-02T15:22:49.981+0000] {task_command.py:389} INFO - Running <TaskInstance: retail_sales_pipeline.run_spark_job manual__2025-07-02T15:14:39.584681+00:00 [running]> on host febdae18cce2
+[2025-07-02T15:22:50.788+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=retail_sales_pipeline
+AIRFLOW_CTX_TASK_ID=run_spark_job
+AIRFLOW_CTX_EXECUTION_DATE=2025-07-02T15:14:39.584681+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-07-02T15:14:39.584681+00:00
+[2025-07-02T15:22:50.842+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-07-02T15:22:50.848+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n        docker exec spark-master /opt/bitnami/spark/bin/spark-submit             --master spark://spark-master:7077             --jars /opt/bitnami/spark/jars/spark-sql-kafka-0-10_2.12-3.5.5.jar,/opt/bitnami/spark/jars/kafka-clients-3.5.1.jar,/opt/bitnami/spark/jars/kafka_2.12-3.5.1.jar,/opt/bitnami/spark/jars/commons-pool2-2.11.1.jar,/opt/bitnami/spark/jars/delta-spark_2.12-3.0.0.jar,/opt/bitnami/spark/jars/delta-storage-3.0.0.jar,/opt/bitnami/spark/jars/spark-token-provider-kafka-0-10_2.12-3.5.5.jar             /opt/***/scripts/transformation/process_sales_new.py\n        ']
+[2025-07-02T15:22:51.024+0000] {subprocess.py:86} INFO - Output:
+[2025-07-02T15:23:02.353+0000] {subprocess.py:93} INFO - 25/07/02 15:23:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-07-02T15:23:06.541+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO SparkContext: Running Spark version 3.5.5
+[2025-07-02T15:23:06.557+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO SparkContext: OS info Linux, 6.10.14-linuxkit, amd64
+[2025-07-02T15:23:06.557+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO SparkContext: Java version 17.0.14
+[2025-07-02T15:23:06.629+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO ResourceUtils: ==============================================================
+[2025-07-02T15:23:06.631+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-07-02T15:23:06.636+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO ResourceUtils: ==============================================================
+[2025-07-02T15:23:06.639+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO SparkContext: Submitted application: KafkaToCSVBatchJob
+[2025-07-02T15:23:06.749+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-07-02T15:23:06.778+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO ResourceProfile: Limiting resource is cpu
+[2025-07-02T15:23:06.779+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-07-02T15:23:06.975+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO SecurityManager: Changing view acls to: spark
+[2025-07-02T15:23:06.979+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO SecurityManager: Changing modify acls to: spark
+[2025-07-02T15:23:06.980+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO SecurityManager: Changing view acls groups to:
+[2025-07-02T15:23:06.982+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO SecurityManager: Changing modify acls groups to:
+[2025-07-02T15:23:06.983+0000] {subprocess.py:93} INFO - 25/07/02 15:23:06 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+[2025-07-02T15:23:07.923+0000] {subprocess.py:93} INFO - 25/07/02 15:23:07 INFO Utils: Successfully started service 'sparkDriver' on port 36847.
+[2025-07-02T15:23:08.059+0000] {subprocess.py:93} INFO - 25/07/02 15:23:08 INFO SparkEnv: Registering MapOutputTracker
+[2025-07-02T15:23:08.298+0000] {subprocess.py:93} INFO - 25/07/02 15:23:08 INFO SparkEnv: Registering BlockManagerMaster
+[2025-07-02T15:23:08.364+0000] {subprocess.py:93} INFO - 25/07/02 15:23:08 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-07-02T15:23:08.368+0000] {subprocess.py:93} INFO - 25/07/02 15:23:08 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-07-02T15:23:08.403+0000] {subprocess.py:93} INFO - 25/07/02 15:23:08 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-07-02T15:23:08.506+0000] {subprocess.py:93} INFO - 25/07/02 15:23:08 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-cf2c6919-12e1-4105-9dde-0d3abf3a39cc
+[2025-07-02T15:23:08.544+0000] {subprocess.py:93} INFO - 25/07/02 15:23:08 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2025-07-02T15:23:08.586+0000] {subprocess.py:93} INFO - 25/07/02 15:23:08 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-07-02T15:23:09.035+0000] {subprocess.py:93} INFO - 25/07/02 15:23:09 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2025-07-02T15:23:09.225+0000] {subprocess.py:93} INFO - 25/07/02 15:23:09 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2025-07-02T15:23:09.598+0000] {subprocess.py:93} INFO - 25/07/02 15:23:09 INFO SparkContext: Added JAR file:///opt/bitnami/spark/jars/spark-sql-kafka-0-10_2.12-3.5.5.jar at spark://ddb9a68c03a1:36847/jars/spark-sql-kafka-0-10_2.12-3.5.5.jar with timestamp 1751469786440
+[2025-07-02T15:23:09.606+0000] {subprocess.py:93} INFO - 25/07/02 15:23:09 INFO SparkContext: Added JAR file:///opt/bitnami/spark/jars/kafka-clients-3.5.1.jar at spark://ddb9a68c03a1:36847/jars/kafka-clients-3.5.1.jar with timestamp 1751469786440
+[2025-07-02T15:23:09.607+0000] {subprocess.py:93} INFO - 25/07/02 15:23:09 INFO SparkContext: Added JAR file:///opt/bitnami/spark/jars/kafka_2.12-3.5.1.jar at spark://ddb9a68c03a1:36847/jars/kafka_2.12-3.5.1.jar with timestamp 1751469786440
+[2025-07-02T15:23:09.608+0000] {subprocess.py:93} INFO - 25/07/02 15:23:09 INFO SparkContext: Added JAR file:///opt/bitnami/spark/jars/commons-pool2-2.11.1.jar at spark://ddb9a68c03a1:36847/jars/commons-pool2-2.11.1.jar with timestamp 1751469786440
+[2025-07-02T15:23:09.608+0000] {subprocess.py:93} INFO - 25/07/02 15:23:09 INFO SparkContext: Added JAR file:///opt/bitnami/spark/jars/delta-spark_2.12-3.0.0.jar at spark://ddb9a68c03a1:36847/jars/delta-spark_2.12-3.0.0.jar with timestamp 1751469786440
+[2025-07-02T15:23:09.608+0000] {subprocess.py:93} INFO - 25/07/02 15:23:09 INFO SparkContext: Added JAR file:///opt/bitnami/spark/jars/delta-storage-3.0.0.jar at spark://ddb9a68c03a1:36847/jars/delta-storage-3.0.0.jar with timestamp 1751469786440
+[2025-07-02T15:23:09.609+0000] {subprocess.py:93} INFO - 25/07/02 15:23:09 INFO SparkContext: Added JAR file:///opt/bitnami/spark/jars/spark-token-provider-kafka-0-10_2.12-3.5.5.jar at spark://ddb9a68c03a1:36847/jars/spark-token-provider-kafka-0-10_2.12-3.5.5.jar with timestamp 1751469786440
+[2025-07-02T15:23:09.936+0000] {subprocess.py:93} INFO - 25/07/02 15:23:09 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+[2025-07-02T15:23:10.228+0000] {subprocess.py:93} INFO - 25/07/02 15:23:10 INFO TransportClientFactory: Successfully created connection to spark-master/172.18.0.9:7077 after 131 ms (0 ms spent in bootstraps)
+[2025-07-02T15:23:10.780+0000] {subprocess.py:93} INFO - 25/07/02 15:23:10 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20250702152310-0001
+[2025-07-02T15:23:10.793+0000] {subprocess.py:93} INFO - 25/07/02 15:23:10 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250702152310-0001/0 on worker-20250702150121-172.18.0.10-34685 (172.18.0.10:34685) with 8 core(s)
+[2025-07-02T15:23:10.830+0000] {subprocess.py:93} INFO - 25/07/02 15:23:10 INFO StandaloneSchedulerBackend: Granted executor ID app-20250702152310-0001/0 on hostPort 172.18.0.10:34685 with 8 core(s), 1024.0 MiB RAM
+[2025-07-02T15:23:10.872+0000] {subprocess.py:93} INFO - 25/07/02 15:23:10 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44557.
+[2025-07-02T15:23:10.873+0000] {subprocess.py:93} INFO - 25/07/02 15:23:10 INFO NettyBlockTransferService: Server created on ddb9a68c03a1:44557
+[2025-07-02T15:23:10.881+0000] {subprocess.py:93} INFO - 25/07/02 15:23:10 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-07-02T15:23:10.914+0000] {subprocess.py:93} INFO - 25/07/02 15:23:10 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ddb9a68c03a1, 44557, None)
+[2025-07-02T15:23:10.933+0000] {subprocess.py:93} INFO - 25/07/02 15:23:10 INFO BlockManagerMasterEndpoint: Registering block manager ddb9a68c03a1:44557 with 434.4 MiB RAM, BlockManagerId(driver, ddb9a68c03a1, 44557, None)
+[2025-07-02T15:23:10.941+0000] {subprocess.py:93} INFO - 25/07/02 15:23:10 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ddb9a68c03a1, 44557, None)
+[2025-07-02T15:23:10.947+0000] {subprocess.py:93} INFO - 25/07/02 15:23:10 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ddb9a68c03a1, 44557, None)
+[2025-07-02T15:23:11.323+0000] {subprocess.py:93} INFO - 25/07/02 15:23:11 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250702152310-0001/0 is now RUNNING
+[2025-07-02T15:23:11.911+0000] {subprocess.py:93} INFO - 25/07/02 15:23:11 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2025-07-02T15:23:12.726+0000] {subprocess.py:93} INFO - 25/07/02 15:23:12 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2025-07-02T15:23:12.739+0000] {subprocess.py:93} INFO - 25/07/02 15:23:12 INFO SharedState: Warehouse path is 'file:/opt/bitnami/spark/spark-warehouse'.
+[2025-07-02T15:23:19.811+0000] {subprocess.py:93} INFO - 25/07/02 15:23:19 INFO CodeGenerator: Code generated in 1195.855793 ms
+[2025-07-02T15:23:20.129+0000] {subprocess.py:93} INFO - 25/07/02 15:23:20 INFO CodeGenerator: Code generated in 224.6185 ms
+[2025-07-02T15:23:25.541+0000] {subprocess.py:93} INFO - 25/07/02 15:23:25 INFO InMemoryFileIndex: It took 634 ms to list leaf files for 1 paths.
+[2025-07-02T15:23:27.083+0000] {subprocess.py:93} INFO - 25/07/02 15:23:27 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.18.0.10:38794) with ID 0,  ResourceProfileId 0
+[2025-07-02T15:23:27.428+0000] {subprocess.py:93} INFO - 25/07/02 15:23:27 INFO BlockManagerMasterEndpoint: Registering block manager 172.18.0.10:43297 with 434.4 MiB RAM, BlockManagerId(0, 172.18.0.10, 43297, None)
+[2025-07-02T15:23:28.983+0000] {subprocess.py:93} INFO - 25/07/02 15:23:28 INFO SparkContext: Starting job: parquet at <unknown>:0
+[2025-07-02T15:23:29.087+0000] {subprocess.py:93} INFO - 25/07/02 15:23:29 INFO DAGScheduler: Got job 0 (parquet at <unknown>:0) with 1 output partitions
+[2025-07-02T15:23:29.092+0000] {subprocess.py:93} INFO - 25/07/02 15:23:29 INFO DAGScheduler: Final stage: ResultStage 0 (parquet at <unknown>:0)
+[2025-07-02T15:23:29.093+0000] {subprocess.py:93} INFO - 25/07/02 15:23:29 INFO DAGScheduler: Parents of final stage: List()
+[2025-07-02T15:23:29.103+0000] {subprocess.py:93} INFO - 25/07/02 15:23:29 INFO DAGScheduler: Missing parents: List()
+[2025-07-02T15:23:29.120+0000] {subprocess.py:93} INFO - 25/07/02 15:23:29 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at parquet at <unknown>:0), which has no missing parents
+[2025-07-02T15:23:29.303+0000] {subprocess.py:93} INFO - 25/07/02 15:23:29 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 104.7 KiB, free 434.3 MiB)
+[2025-07-02T15:23:29.466+0000] {subprocess.py:93} INFO - 25/07/02 15:23:29 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 37.8 KiB, free 434.3 MiB)
+[2025-07-02T15:23:29.485+0000] {subprocess.py:93} INFO - 25/07/02 15:23:29 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on ddb9a68c03a1:44557 (size: 37.8 KiB, free: 434.4 MiB)
+[2025-07-02T15:23:29.503+0000] {subprocess.py:93} INFO - 25/07/02 15:23:29 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1585
+[2025-07-02T15:23:29.859+0000] {subprocess.py:93} INFO - 25/07/02 15:23:29 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at parquet at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+[2025-07-02T15:23:29.876+0000] {subprocess.py:93} INFO - 25/07/02 15:23:29 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+[2025-07-02T15:23:30.140+0000] {subprocess.py:93} INFO - 25/07/02 15:23:30 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (172.18.0.10, executor 0, partition 0, PROCESS_LOCAL, 9819 bytes)
+[2025-07-02T15:23:32.218+0000] {subprocess.py:93} INFO - 25/07/02 15:23:32 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.18.0.10:43297 (size: 37.8 KiB, free: 434.4 MiB)
+[2025-07-02T15:23:34.551+0000] {subprocess.py:93} INFO - 25/07/02 15:23:34 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 4541 ms on 172.18.0.10 (executor 0) (1/1)
+[2025-07-02T15:23:34.561+0000] {subprocess.py:93} INFO - 25/07/02 15:23:34 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2025-07-02T15:23:34.597+0000] {subprocess.py:93} INFO - 25/07/02 15:23:34 INFO DAGScheduler: ResultStage 0 (parquet at <unknown>:0) finished in 5.422 s
+[2025-07-02T15:23:34.620+0000] {subprocess.py:93} INFO - 25/07/02 15:23:34 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-07-02T15:23:34.621+0000] {subprocess.py:93} INFO - 25/07/02 15:23:34 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+[2025-07-02T15:23:34.639+0000] {subprocess.py:93} INFO - 25/07/02 15:23:34 INFO DAGScheduler: Job 0 finished: parquet at <unknown>:0, took 5.656300 s
+[2025-07-02T15:23:35.423+0000] {subprocess.py:93} INFO - 25/07/02 15:23:35 INFO InMemoryFileIndex: It took 44 ms to list leaf files for 1 paths.
+[2025-07-02T15:23:36.108+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO SparkContext: Starting job: parquet at <unknown>:0
+[2025-07-02T15:23:36.148+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO DAGScheduler: Got job 1 (parquet at <unknown>:0) with 1 output partitions
+[2025-07-02T15:23:36.150+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO DAGScheduler: Final stage: ResultStage 1 (parquet at <unknown>:0)
+[2025-07-02T15:23:36.152+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO DAGScheduler: Parents of final stage: List()
+[2025-07-02T15:23:36.154+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO DAGScheduler: Missing parents: List()
+[2025-07-02T15:23:36.170+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[3] at parquet at <unknown>:0), which has no missing parents
+[2025-07-02T15:23:36.260+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 104.7 KiB, free 434.2 MiB)
+[2025-07-02T15:23:36.292+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 37.8 KiB, free 434.1 MiB)
+[2025-07-02T15:23:36.298+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on ddb9a68c03a1:44557 (size: 37.8 KiB, free: 434.3 MiB)
+[2025-07-02T15:23:36.311+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+[2025-07-02T15:23:36.322+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at parquet at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+[2025-07-02T15:23:36.325+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+[2025-07-02T15:23:36.350+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (172.18.0.10, executor 0, partition 0, PROCESS_LOCAL, 9818 bytes)
+[2025-07-02T15:23:36.815+0000] {subprocess.py:93} INFO - 25/07/02 15:23:36 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 172.18.0.10:43297 (size: 37.8 KiB, free: 434.3 MiB)
+[2025-07-02T15:23:37.178+0000] {subprocess.py:93} INFO - 25/07/02 15:23:37 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 785 ms on 172.18.0.10 (executor 0) (1/1)
+[2025-07-02T15:23:37.180+0000] {subprocess.py:93} INFO - 25/07/02 15:23:37 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2025-07-02T15:23:37.181+0000] {subprocess.py:93} INFO - 25/07/02 15:23:37 INFO DAGScheduler: ResultStage 1 (parquet at <unknown>:0) finished in 0.962 s
+[2025-07-02T15:23:37.184+0000] {subprocess.py:93} INFO - 25/07/02 15:23:37 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-07-02T15:23:37.195+0000] {subprocess.py:93} INFO - 25/07/02 15:23:37 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+[2025-07-02T15:23:37.202+0000] {subprocess.py:93} INFO - 25/07/02 15:23:37 INFO DAGScheduler: Job 1 finished: parquet at <unknown>:0, took 1.105698 s
+[2025-07-02T15:23:38.270+0000] {subprocess.py:93} INFO - --------------------almost here--------------------------------------
+[2025-07-02T15:23:39.261+0000] {subprocess.py:93} INFO - 25/07/02 15:23:39 INFO BlockManagerInfo: Removed broadcast_0_piece0 on ddb9a68c03a1:44557 in memory (size: 37.8 KiB, free: 434.4 MiB)
+[2025-07-02T15:23:39.490+0000] {subprocess.py:93} INFO - 25/07/02 15:23:39 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 172.18.0.10:43297 in memory (size: 37.8 KiB, free: 434.4 MiB)
+[2025-07-02T15:23:39.605+0000] {subprocess.py:93} INFO - 25/07/02 15:23:39 INFO BlockManagerInfo: Removed broadcast_1_piece0 on ddb9a68c03a1:44557 in memory (size: 37.8 KiB, free: 434.4 MiB)
+[2025-07-02T15:23:39.630+0000] {subprocess.py:93} INFO - 25/07/02 15:23:39 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 172.18.0.10:43297 in memory (size: 37.8 KiB, free: 434.4 MiB)
+[2025-07-02T15:23:40.790+0000] {subprocess.py:93} INFO - 25/07/02 15:23:40 INFO AdminClientConfig: AdminClientConfig values:
+[2025-07-02T15:23:40.805+0000] {subprocess.py:93} INFO - 	auto.include.jmx.reporter = true
+[2025-07-02T15:23:40.805+0000] {subprocess.py:93} INFO - 	bootstrap.servers = [kafka:9093]
+[2025-07-02T15:23:40.806+0000] {subprocess.py:93} INFO - 	client.dns.lookup = use_all_dns_ips
+[2025-07-02T15:23:40.807+0000] {subprocess.py:93} INFO - 	client.id =
+[2025-07-02T15:23:40.808+0000] {subprocess.py:93} INFO - 	connections.max.idle.ms = 300000
+[2025-07-02T15:23:40.808+0000] {subprocess.py:93} INFO - 	default.api.timeout.ms = 60000
+[2025-07-02T15:23:40.809+0000] {subprocess.py:93} INFO - 	metadata.max.age.ms = 300000
+[2025-07-02T15:23:40.810+0000] {subprocess.py:93} INFO - 	metric.reporters = []
+[2025-07-02T15:23:40.811+0000] {subprocess.py:93} INFO - 	metrics.num.samples = 2
+[2025-07-02T15:23:40.812+0000] {subprocess.py:93} INFO - 	metrics.recording.level = INFO
+[2025-07-02T15:23:40.813+0000] {subprocess.py:93} INFO - 	metrics.sample.window.ms = 30000
+[2025-07-02T15:23:40.814+0000] {subprocess.py:93} INFO - 	receive.buffer.bytes = 65536
+[2025-07-02T15:23:40.814+0000] {subprocess.py:93} INFO - 	reconnect.backoff.max.ms = 1000
+[2025-07-02T15:23:40.817+0000] {subprocess.py:93} INFO - 	reconnect.backoff.ms = 50
+[2025-07-02T15:23:40.817+0000] {subprocess.py:93} INFO - 	request.timeout.ms = 30000
+[2025-07-02T15:23:40.818+0000] {subprocess.py:93} INFO - 	retries = 2147483647
+[2025-07-02T15:23:40.819+0000] {subprocess.py:93} INFO - 	retry.backoff.ms = 100
+[2025-07-02T15:23:40.820+0000] {subprocess.py:93} INFO - 	sasl.client.callback.handler.class = null
+[2025-07-02T15:23:40.820+0000] {subprocess.py:93} INFO - 	sasl.jaas.config = null
+[2025-07-02T15:23:40.820+0000] {subprocess.py:93} INFO - 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+[2025-07-02T15:23:40.821+0000] {subprocess.py:93} INFO - 	sasl.kerberos.min.time.before.relogin = 60000
+[2025-07-02T15:23:40.821+0000] {subprocess.py:93} INFO - 	sasl.kerberos.service.name = null
+[2025-07-02T15:23:40.821+0000] {subprocess.py:93} INFO - 	sasl.kerberos.ticket.renew.jitter = 0.05
+[2025-07-02T15:23:40.821+0000] {subprocess.py:93} INFO - 	sasl.kerberos.ticket.renew.window.factor = 0.8
+[2025-07-02T15:23:40.822+0000] {subprocess.py:93} INFO - 	sasl.login.callback.handler.class = null
+[2025-07-02T15:23:40.822+0000] {subprocess.py:93} INFO - 	sasl.login.class = null
+[2025-07-02T15:23:40.822+0000] {subprocess.py:93} INFO - 	sasl.login.connect.timeout.ms = null
+[2025-07-02T15:23:40.823+0000] {subprocess.py:93} INFO - 	sasl.login.read.timeout.ms = null
+[2025-07-02T15:23:40.823+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.buffer.seconds = 300
+[2025-07-02T15:23:40.823+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.min.period.seconds = 60
+[2025-07-02T15:23:40.823+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.window.factor = 0.8
+[2025-07-02T15:23:40.823+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.window.jitter = 0.05
+[2025-07-02T15:23:40.824+0000] {subprocess.py:93} INFO - 	sasl.login.retry.backoff.max.ms = 10000
+[2025-07-02T15:23:40.824+0000] {subprocess.py:93} INFO - 	sasl.login.retry.backoff.ms = 100
+[2025-07-02T15:23:40.824+0000] {subprocess.py:93} INFO - 	sasl.mechanism = GSSAPI
+[2025-07-02T15:23:40.824+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.clock.skew.seconds = 30
+[2025-07-02T15:23:40.824+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.expected.audience = null
+[2025-07-02T15:23:40.825+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.expected.issuer = null
+[2025-07-02T15:23:40.825+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+[2025-07-02T15:23:40.825+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+[2025-07-02T15:23:40.826+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+[2025-07-02T15:23:40.826+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.url = null
+[2025-07-02T15:23:40.827+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.scope.claim.name = scope
+[2025-07-02T15:23:40.827+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.sub.claim.name = sub
+[2025-07-02T15:23:40.827+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.token.endpoint.url = null
+[2025-07-02T15:23:40.827+0000] {subprocess.py:93} INFO - 	security.protocol = PLAINTEXT
+[2025-07-02T15:23:40.828+0000] {subprocess.py:93} INFO - 	security.providers = null
+[2025-07-02T15:23:40.828+0000] {subprocess.py:93} INFO - 	send.buffer.bytes = 131072
+[2025-07-02T15:23:40.828+0000] {subprocess.py:93} INFO - 	socket.connection.setup.timeout.max.ms = 30000
+[2025-07-02T15:23:40.828+0000] {subprocess.py:93} INFO - 	socket.connection.setup.timeout.ms = 10000
+[2025-07-02T15:23:40.828+0000] {subprocess.py:93} INFO - 	ssl.cipher.suites = null
+[2025-07-02T15:23:40.829+0000] {subprocess.py:93} INFO - 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+[2025-07-02T15:23:40.829+0000] {subprocess.py:93} INFO - 	ssl.endpoint.identification.algorithm = https
+[2025-07-02T15:23:40.829+0000] {subprocess.py:93} INFO - 	ssl.engine.factory.class = null
+[2025-07-02T15:23:40.830+0000] {subprocess.py:93} INFO - 	ssl.key.password = null
+[2025-07-02T15:23:40.830+0000] {subprocess.py:93} INFO - 	ssl.keymanager.algorithm = SunX509
+[2025-07-02T15:23:40.830+0000] {subprocess.py:93} INFO - 	ssl.keystore.certificate.chain = null
+[2025-07-02T15:23:40.831+0000] {subprocess.py:93} INFO - 	ssl.keystore.key = null
+[2025-07-02T15:23:40.832+0000] {subprocess.py:93} INFO - 	ssl.keystore.location = null
+[2025-07-02T15:23:40.835+0000] {subprocess.py:93} INFO - 	ssl.keystore.password = null
+[2025-07-02T15:23:40.836+0000] {subprocess.py:93} INFO - 	ssl.keystore.type = JKS
+[2025-07-02T15:23:40.837+0000] {subprocess.py:93} INFO - 	ssl.protocol = TLSv1.3
+[2025-07-02T15:23:40.837+0000] {subprocess.py:93} INFO - 	ssl.provider = null
+[2025-07-02T15:23:40.838+0000] {subprocess.py:93} INFO - 	ssl.secure.random.implementation = null
+[2025-07-02T15:23:40.839+0000] {subprocess.py:93} INFO - 	ssl.trustmanager.algorithm = PKIX
+[2025-07-02T15:23:40.839+0000] {subprocess.py:93} INFO - 	ssl.truststore.certificates = null
+[2025-07-02T15:23:40.839+0000] {subprocess.py:93} INFO - 	ssl.truststore.location = null
+[2025-07-02T15:23:40.840+0000] {subprocess.py:93} INFO - 	ssl.truststore.password = null
+[2025-07-02T15:23:40.840+0000] {subprocess.py:93} INFO - 	ssl.truststore.type = JKS
+[2025-07-02T15:23:40.840+0000] {subprocess.py:93} INFO - 
+[2025-07-02T15:23:41.190+0000] {subprocess.py:93} INFO - 25/07/02 15:23:41 INFO AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+[2025-07-02T15:23:41.211+0000] {subprocess.py:93} INFO - 25/07/02 15:23:41 INFO AppInfoParser: Kafka version: 3.5.1
+[2025-07-02T15:23:41.213+0000] {subprocess.py:93} INFO - 25/07/02 15:23:41 INFO AppInfoParser: Kafka commitId: 2c6fb6c54472e90a
+[2025-07-02T15:23:41.213+0000] {subprocess.py:93} INFO - 25/07/02 15:23:41 INFO AppInfoParser: Kafka startTimeMs: 1751469821184
+[2025-07-02T15:23:43.059+0000] {subprocess.py:93} INFO - 25/07/02 15:23:43 INFO AppInfoParser: App info kafka.admin.client for adminclient-1 unregistered
+[2025-07-02T15:23:43.078+0000] {subprocess.py:93} INFO - 25/07/02 15:23:43 INFO Metrics: Metrics scheduler closed
+[2025-07-02T15:23:43.081+0000] {subprocess.py:93} INFO - 25/07/02 15:23:43 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2025-07-02T15:23:43.081+0000] {subprocess.py:93} INFO - 25/07/02 15:23:43 INFO Metrics: Metrics reporters closed
+[2025-07-02T15:23:43.081+0000] {subprocess.py:93} INFO - 25/07/02 15:23:43 INFO KafkaRelation: GetBatch generating RDD of offset range: KafkaOffsetRange(transaction-events-0,-2,-1,None)
+[2025-07-02T15:23:43.797+0000] {subprocess.py:93} INFO - 25/07/02 15:23:43 INFO CodeGenerator: Code generated in 253.412584 ms
+[2025-07-02T15:23:44.244+0000] {subprocess.py:93} INFO - 25/07/02 15:23:44 INFO FileSourceStrategy: Pushed Filters: IsNotNull(customer_id)
+[2025-07-02T15:23:44.250+0000] {subprocess.py:93} INFO - 25/07/02 15:23:44 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(customer_id#28)
+[2025-07-02T15:23:44.291+0000] {subprocess.py:93} INFO - 25/07/02 15:23:44 INFO FileSourceStrategy: Pushed Filters: IsNotNull(product_id)
+[2025-07-02T15:23:44.292+0000] {subprocess.py:93} INFO - 25/07/02 15:23:44 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(product_id#38)
+[2025-07-02T15:23:46.536+0000] {subprocess.py:93} INFO - 25/07/02 15:23:46 INFO CodeGenerator: Code generated in 1316.258084 ms
+[2025-07-02T15:23:46.552+0000] {subprocess.py:93} INFO - 25/07/02 15:23:46 INFO CodeGenerator: Code generated in 1317.460334 ms
+[2025-07-02T15:23:46.872+0000] {subprocess.py:93} INFO - 25/07/02 15:23:46 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 203.1 KiB, free 434.0 MiB)
+[2025-07-02T15:23:46.876+0000] {subprocess.py:93} INFO - 25/07/02 15:23:46 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 203.0 KiB, free 434.0 MiB)
+[2025-07-02T15:23:46.946+0000] {subprocess.py:93} INFO - 25/07/02 15:23:46 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 35.6 KiB, free 434.0 MiB)
+[2025-07-02T15:23:46.961+0000] {subprocess.py:93} INFO - 25/07/02 15:23:46 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on ddb9a68c03a1:44557 (size: 35.6 KiB, free: 434.4 MiB)
+[2025-07-02T15:23:46.985+0000] {subprocess.py:93} INFO - 25/07/02 15:23:46 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 35.7 KiB, free 433.9 MiB)
+[2025-07-02T15:23:46.989+0000] {subprocess.py:93} INFO - 25/07/02 15:23:46 INFO SparkContext: Created broadcast 2 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+[2025-07-02T15:23:46.991+0000] {subprocess.py:93} INFO - 25/07/02 15:23:46 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on ddb9a68c03a1:44557 (size: 35.7 KiB, free: 434.3 MiB)
+[2025-07-02T15:23:46.995+0000] {subprocess.py:93} INFO - 25/07/02 15:23:46 INFO SparkContext: Created broadcast 3 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+[2025-07-02T15:23:47.083+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2025-07-02T15:23:47.085+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2025-07-02T15:23:47.409+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+[2025-07-02T15:23:47.419+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+[2025-07-02T15:23:47.427+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO DAGScheduler: Got job 2 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 1 output partitions
+[2025-07-02T15:23:47.428+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO DAGScheduler: Final stage: ResultStage 2 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+[2025-07-02T15:23:47.429+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO DAGScheduler: Parents of final stage: List()
+[2025-07-02T15:23:47.431+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO DAGScheduler: Missing parents: List()
+[2025-07-02T15:23:47.438+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[17] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+[2025-07-02T15:23:47.472+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 16.4 KiB, free 433.9 MiB)
+[2025-07-02T15:23:47.495+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 6.7 KiB, free 433.9 MiB)
+[2025-07-02T15:23:47.498+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on ddb9a68c03a1:44557 (size: 6.7 KiB, free: 434.3 MiB)
+[2025-07-02T15:23:47.502+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1585
+[2025-07-02T15:23:47.504+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[17] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+[2025-07-02T15:23:47.504+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0
+[2025-07-02T15:23:47.511+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO DAGScheduler: Got job 3 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 1 output partitions
+[2025-07-02T15:23:47.513+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO DAGScheduler: Final stage: ResultStage 3 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+[2025-07-02T15:23:47.515+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO DAGScheduler: Parents of final stage: List()
+[2025-07-02T15:23:47.517+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO DAGScheduler: Missing parents: List()
+[2025-07-02T15:23:47.517+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[18] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+[2025-07-02T15:23:47.528+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 17.0 KiB, free 433.9 MiB)
+[2025-07-02T15:23:47.532+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (172.18.0.10, executor 0, partition 0, PROCESS_LOCAL, 10325 bytes)
+[2025-07-02T15:23:47.549+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 6.8 KiB, free 433.9 MiB)
+[2025-07-02T15:23:47.552+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on ddb9a68c03a1:44557 (size: 6.8 KiB, free: 434.3 MiB)
+[2025-07-02T15:23:47.558+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1585
+[2025-07-02T15:23:47.560+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[18] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+[2025-07-02T15:23:47.561+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks resource profile 0
+[2025-07-02T15:23:47.573+0000] {subprocess.py:93} INFO - 25/07/02 15:23:47 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3) (172.18.0.10, executor 0, partition 0, PROCESS_LOCAL, 10326 bytes)
+[2025-07-02T15:23:48.226+0000] {subprocess.py:93} INFO - 25/07/02 15:23:48 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 172.18.0.10:43297 (size: 6.7 KiB, free: 434.4 MiB)
+[2025-07-02T15:23:48.233+0000] {subprocess.py:93} INFO - 25/07/02 15:23:48 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 172.18.0.10:43297 (size: 6.8 KiB, free: 434.4 MiB)
+[2025-07-02T15:23:51.389+0000] {subprocess.py:93} INFO - 25/07/02 15:23:51 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 172.18.0.10:43297 (size: 35.6 KiB, free: 434.4 MiB)
+[2025-07-02T15:23:51.397+0000] {subprocess.py:93} INFO - 25/07/02 15:23:51 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 172.18.0.10:43297 (size: 35.7 KiB, free: 434.3 MiB)
+[2025-07-02T15:23:54.058+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 6522 ms on 172.18.0.10 (executor 0) (1/1)
+[2025-07-02T15:23:54.076+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool
+[2025-07-02T15:23:54.077+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 6476 ms on 172.18.0.10 (executor 0) (1/1)
+[2025-07-02T15:23:54.077+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool
+[2025-07-02T15:23:54.079+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO DAGScheduler: ResultStage 2 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 6.600 s
+[2025-07-02T15:23:54.081+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-07-02T15:23:54.083+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+[2025-07-02T15:23:54.087+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO DAGScheduler: Job 2 finished: $anonfun$withThreadLocalCaptured$1 at <unknown>:0, took 6.667868 s
+[2025-07-02T15:23:54.089+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO DAGScheduler: ResultStage 3 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 6.559 s
+[2025-07-02T15:23:54.089+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-07-02T15:23:54.090+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+[2025-07-02T15:23:54.091+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO DAGScheduler: Job 3 finished: $anonfun$withThreadLocalCaptured$1 at <unknown>:0, took 6.664471 s
+[2025-07-02T15:23:54.393+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO CodeGenerator: Code generated in 123.621583 ms
+[2025-07-02T15:23:54.455+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 299.0 B, free 433.9 MiB)
+[2025-07-02T15:23:54.460+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 268.0 B, free 433.9 MiB)
+[2025-07-02T15:23:54.461+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on ddb9a68c03a1:44557 (size: 299.0 B, free: 434.3 MiB)
+[2025-07-02T15:23:54.468+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on ddb9a68c03a1:44557 (size: 268.0 B, free: 434.3 MiB)
+[2025-07-02T15:23:54.471+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO SparkContext: Created broadcast 6 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+[2025-07-02T15:23:54.476+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO SparkContext: Created broadcast 7 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+[2025-07-02T15:23:54.581+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO AdminClientConfig: AdminClientConfig values:
+[2025-07-02T15:23:54.583+0000] {subprocess.py:93} INFO - 	auto.include.jmx.reporter = true
+[2025-07-02T15:23:54.583+0000] {subprocess.py:93} INFO - 	bootstrap.servers = [kafka:9093]
+[2025-07-02T15:23:54.584+0000] {subprocess.py:93} INFO - 	client.dns.lookup = use_all_dns_ips
+[2025-07-02T15:23:54.584+0000] {subprocess.py:93} INFO - 	client.id =
+[2025-07-02T15:23:54.585+0000] {subprocess.py:93} INFO - 	connections.max.idle.ms = 300000
+[2025-07-02T15:23:54.586+0000] {subprocess.py:93} INFO - 	default.api.timeout.ms = 60000
+[2025-07-02T15:23:54.586+0000] {subprocess.py:93} INFO - 	metadata.max.age.ms = 300000
+[2025-07-02T15:23:54.586+0000] {subprocess.py:93} INFO - 	metric.reporters = []
+[2025-07-02T15:23:54.587+0000] {subprocess.py:93} INFO - 	metrics.num.samples = 2
+[2025-07-02T15:23:54.587+0000] {subprocess.py:93} INFO - 	metrics.recording.level = INFO
+[2025-07-02T15:23:54.588+0000] {subprocess.py:93} INFO - 	metrics.sample.window.ms = 30000
+[2025-07-02T15:23:54.588+0000] {subprocess.py:93} INFO - 	receive.buffer.bytes = 65536
+[2025-07-02T15:23:54.589+0000] {subprocess.py:93} INFO - 	reconnect.backoff.max.ms = 1000
+[2025-07-02T15:23:54.589+0000] {subprocess.py:93} INFO - 	reconnect.backoff.ms = 50
+[2025-07-02T15:23:54.590+0000] {subprocess.py:93} INFO - 	request.timeout.ms = 30000
+[2025-07-02T15:23:54.590+0000] {subprocess.py:93} INFO - 	retries = 2147483647
+[2025-07-02T15:23:54.591+0000] {subprocess.py:93} INFO - 	retry.backoff.ms = 100
+[2025-07-02T15:23:54.591+0000] {subprocess.py:93} INFO - 	sasl.client.callback.handler.class = null
+[2025-07-02T15:23:54.592+0000] {subprocess.py:93} INFO - 	sasl.jaas.config = null
+[2025-07-02T15:23:54.592+0000] {subprocess.py:93} INFO - 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+[2025-07-02T15:23:54.592+0000] {subprocess.py:93} INFO - 	sasl.kerberos.min.time.before.relogin = 60000
+[2025-07-02T15:23:54.592+0000] {subprocess.py:93} INFO - 	sasl.kerberos.service.name = null
+[2025-07-02T15:23:54.592+0000] {subprocess.py:93} INFO - 	sasl.kerberos.ticket.renew.jitter = 0.05
+[2025-07-02T15:23:54.593+0000] {subprocess.py:93} INFO - 	sasl.kerberos.ticket.renew.window.factor = 0.8
+[2025-07-02T15:23:54.593+0000] {subprocess.py:93} INFO - 	sasl.login.callback.handler.class = null
+[2025-07-02T15:23:54.593+0000] {subprocess.py:93} INFO - 	sasl.login.class = null
+[2025-07-02T15:23:54.593+0000] {subprocess.py:93} INFO - 	sasl.login.connect.timeout.ms = null
+[2025-07-02T15:23:54.594+0000] {subprocess.py:93} INFO - 	sasl.login.read.timeout.ms = null
+[2025-07-02T15:23:54.594+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.buffer.seconds = 300
+[2025-07-02T15:23:54.594+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.min.period.seconds = 60
+[2025-07-02T15:23:54.595+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.window.factor = 0.8
+[2025-07-02T15:23:54.595+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.window.jitter = 0.05
+[2025-07-02T15:23:54.595+0000] {subprocess.py:93} INFO - 	sasl.login.retry.backoff.max.ms = 10000
+[2025-07-02T15:23:54.595+0000] {subprocess.py:93} INFO - 	sasl.login.retry.backoff.ms = 100
+[2025-07-02T15:23:54.596+0000] {subprocess.py:93} INFO - 	sasl.mechanism = GSSAPI
+[2025-07-02T15:23:54.596+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.clock.skew.seconds = 30
+[2025-07-02T15:23:54.596+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.expected.audience = null
+[2025-07-02T15:23:54.597+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.expected.issuer = null
+[2025-07-02T15:23:54.598+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+[2025-07-02T15:23:54.598+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+[2025-07-02T15:23:54.599+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+[2025-07-02T15:23:54.600+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.url = null
+[2025-07-02T15:23:54.601+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.scope.claim.name = scope
+[2025-07-02T15:23:54.602+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.sub.claim.name = sub
+[2025-07-02T15:23:54.604+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.token.endpoint.url = null
+[2025-07-02T15:23:54.604+0000] {subprocess.py:93} INFO - 	security.protocol = PLAINTEXT
+[2025-07-02T15:23:54.606+0000] {subprocess.py:93} INFO - 	security.providers = null
+[2025-07-02T15:23:54.607+0000] {subprocess.py:93} INFO - 	send.buffer.bytes = 131072
+[2025-07-02T15:23:54.608+0000] {subprocess.py:93} INFO - 	socket.connection.setup.timeout.max.ms = 30000
+[2025-07-02T15:23:54.608+0000] {subprocess.py:93} INFO - 	socket.connection.setup.timeout.ms = 10000
+[2025-07-02T15:23:54.609+0000] {subprocess.py:93} INFO - 	ssl.cipher.suites = null
+[2025-07-02T15:23:54.609+0000] {subprocess.py:93} INFO - 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+[2025-07-02T15:23:54.610+0000] {subprocess.py:93} INFO - 	ssl.endpoint.identification.algorithm = https
+[2025-07-02T15:23:54.611+0000] {subprocess.py:93} INFO - 	ssl.engine.factory.class = null
+[2025-07-02T15:23:54.612+0000] {subprocess.py:93} INFO - 	ssl.key.password = null
+[2025-07-02T15:23:54.612+0000] {subprocess.py:93} INFO - 	ssl.keymanager.algorithm = SunX509
+[2025-07-02T15:23:54.612+0000] {subprocess.py:93} INFO - 	ssl.keystore.certificate.chain = null
+[2025-07-02T15:23:54.613+0000] {subprocess.py:93} INFO - 	ssl.keystore.key = null
+[2025-07-02T15:23:54.613+0000] {subprocess.py:93} INFO - 	ssl.keystore.location = null
+[2025-07-02T15:23:54.613+0000] {subprocess.py:93} INFO - 	ssl.keystore.password = null
+[2025-07-02T15:23:54.613+0000] {subprocess.py:93} INFO - 	ssl.keystore.type = JKS
+[2025-07-02T15:23:54.613+0000] {subprocess.py:93} INFO - 	ssl.protocol = TLSv1.3
+[2025-07-02T15:23:54.614+0000] {subprocess.py:93} INFO - 	ssl.provider = null
+[2025-07-02T15:23:54.614+0000] {subprocess.py:93} INFO - 	ssl.secure.random.implementation = null
+[2025-07-02T15:23:54.614+0000] {subprocess.py:93} INFO - 	ssl.trustmanager.algorithm = PKIX
+[2025-07-02T15:23:54.614+0000] {subprocess.py:93} INFO - 	ssl.truststore.certificates = null
+[2025-07-02T15:23:54.614+0000] {subprocess.py:93} INFO - 	ssl.truststore.location = null
+[2025-07-02T15:23:54.614+0000] {subprocess.py:93} INFO - 	ssl.truststore.password = null
+[2025-07-02T15:23:54.615+0000] {subprocess.py:93} INFO - 	ssl.truststore.type = JKS
+[2025-07-02T15:23:54.615+0000] {subprocess.py:93} INFO - 
+[2025-07-02T15:23:54.624+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+[2025-07-02T15:23:54.626+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO AppInfoParser: Kafka version: 3.5.1
+[2025-07-02T15:23:54.628+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO AppInfoParser: Kafka commitId: 2c6fb6c54472e90a
+[2025-07-02T15:23:54.630+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO AppInfoParser: Kafka startTimeMs: 1751469834620
+[2025-07-02T15:23:54.860+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO AppInfoParser: App info kafka.admin.client for adminclient-2 unregistered
+[2025-07-02T15:23:54.887+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO Metrics: Metrics scheduler closed
+[2025-07-02T15:23:54.889+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2025-07-02T15:23:54.890+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO Metrics: Metrics reporters closed
+[2025-07-02T15:23:54.891+0000] {subprocess.py:93} INFO - 25/07/02 15:23:54 INFO KafkaRelation: GetBatch generating RDD of offset range: KafkaOffsetRange(transaction-events-0,-2,-1,None)
+[2025-07-02T15:23:56.525+0000] {subprocess.py:93} INFO - 25/07/02 15:23:56 INFO CodeGenerator: Code generated in 586.637875 ms
+[2025-07-02T15:23:56.714+0000] {subprocess.py:93} INFO - 25/07/02 15:23:56 INFO CodeGenerator: Code generated in 155.142166 ms
+[2025-07-02T15:23:56.920+0000] {subprocess.py:93} INFO - 25/07/02 15:23:56 INFO SparkContext: Starting job: showString at <unknown>:0
+[2025-07-02T15:23:56.944+0000] {subprocess.py:93} INFO - 25/07/02 15:23:56 INFO DAGScheduler: Got job 4 (showString at <unknown>:0) with 1 output partitions
+[2025-07-02T15:23:56.946+0000] {subprocess.py:93} INFO - 25/07/02 15:23:56 INFO DAGScheduler: Final stage: ResultStage 4 (showString at <unknown>:0)
+[2025-07-02T15:23:56.949+0000] {subprocess.py:93} INFO - 25/07/02 15:23:56 INFO DAGScheduler: Parents of final stage: List()
+[2025-07-02T15:23:56.953+0000] {subprocess.py:93} INFO - 25/07/02 15:23:56 INFO DAGScheduler: Missing parents: List()
+[2025-07-02T15:23:56.961+0000] {subprocess.py:93} INFO - 25/07/02 15:23:56 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[29] at showString at <unknown>:0), which has no missing parents
+[2025-07-02T15:23:57.324+0000] {subprocess.py:93} INFO - 25/07/02 15:23:57 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 56.3 KiB, free 433.8 MiB)
+[2025-07-02T15:23:57.359+0000] {subprocess.py:93} INFO - 25/07/02 15:23:57 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 21.6 KiB, free 433.8 MiB)
+[2025-07-02T15:23:57.368+0000] {subprocess.py:93} INFO - 25/07/02 15:23:57 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on ddb9a68c03a1:44557 (size: 21.6 KiB, free: 434.3 MiB)
+[2025-07-02T15:23:57.371+0000] {subprocess.py:93} INFO - 25/07/02 15:23:57 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1585
+[2025-07-02T15:23:57.378+0000] {subprocess.py:93} INFO - 25/07/02 15:23:57 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[29] at showString at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+[2025-07-02T15:23:57.380+0000] {subprocess.py:93} INFO - 25/07/02 15:23:57 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks resource profile 0
+[2025-07-02T15:23:57.400+0000] {subprocess.py:93} INFO - 25/07/02 15:23:57 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4) (172.18.0.10, executor 0, partition 0, PROCESS_LOCAL, 9844 bytes)
+[2025-07-02T15:23:57.847+0000] {subprocess.py:93} INFO - 25/07/02 15:23:57 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on 172.18.0.10:43297 (size: 21.6 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:08.563+0000] {subprocess.py:93} INFO - 25/07/02 15:24:08 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 172.18.0.10:43297 (size: 299.0 B, free: 434.3 MiB)
+[2025-07-02T15:24:08.717+0000] {subprocess.py:93} INFO - 25/07/02 15:24:08 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 172.18.0.10:43297 (size: 268.0 B, free: 434.3 MiB)
+[2025-07-02T15:24:12.100+0000] {subprocess.py:93} INFO - 25/07/02 15:24:12 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 14689 ms on 172.18.0.10 (executor 0) (1/1)
+[2025-07-02T15:24:12.116+0000] {subprocess.py:93} INFO - 25/07/02 15:24:12 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool
+[2025-07-02T15:24:12.118+0000] {subprocess.py:93} INFO - 25/07/02 15:24:12 INFO DAGScheduler: ResultStage 4 (showString at <unknown>:0) finished in 15.101 s
+[2025-07-02T15:24:12.120+0000] {subprocess.py:93} INFO - 25/07/02 15:24:12 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-07-02T15:24:12.121+0000] {subprocess.py:93} INFO - 25/07/02 15:24:12 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+[2025-07-02T15:24:12.122+0000] {subprocess.py:93} INFO - 25/07/02 15:24:12 INFO DAGScheduler: Job 4 finished: showString at <unknown>:0, took 15.193542 s
+[2025-07-02T15:24:14.062+0000] {subprocess.py:93} INFO - 25/07/02 15:24:14 INFO BlockManagerInfo: Removed broadcast_5_piece0 on ddb9a68c03a1:44557 in memory (size: 6.8 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:14.174+0000] {subprocess.py:93} INFO - 25/07/02 15:24:14 INFO BlockManagerInfo: Removed broadcast_5_piece0 on 172.18.0.10:43297 in memory (size: 6.8 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:14.273+0000] {subprocess.py:93} INFO - 25/07/02 15:24:14 INFO BlockManagerInfo: Removed broadcast_4_piece0 on ddb9a68c03a1:44557 in memory (size: 6.7 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:14.306+0000] {subprocess.py:93} INFO - 25/07/02 15:24:14 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 172.18.0.10:43297 in memory (size: 6.7 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:14.346+0000] {subprocess.py:93} INFO - 25/07/02 15:24:14 INFO BlockManagerInfo: Removed broadcast_8_piece0 on ddb9a68c03a1:44557 in memory (size: 21.6 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:14.357+0000] {subprocess.py:93} INFO - 25/07/02 15:24:14 INFO BlockManagerInfo: Removed broadcast_8_piece0 on 172.18.0.10:43297 in memory (size: 21.6 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:17.662+0000] {subprocess.py:93} INFO - 25/07/02 15:24:17 INFO CodeGenerator: Code generated in 257.419167 ms
+[2025-07-02T15:24:17.754+0000] {subprocess.py:93} INFO - +----------+-----------+-------+--------+--------------------------+----------+---------+----------------+-----------+------------+-----------+-----+
+[2025-07-02T15:24:17.755+0000] {subprocess.py:93} INFO - |product_id|customer_id|sale_id|quantity|sale_timestamp            |first_name|last_name|email           |signup_date|product_name|category   |price|
+[2025-07-02T15:24:17.755+0000] {subprocess.py:93} INFO - +----------+-----------+-------+--------+--------------------------+----------+---------+----------------+-----------+------------+-----------+-----+
+[2025-07-02T15:24:17.756+0000] {subprocess.py:93} INFO - |102       |2          |459349 |5       |2025-07-02 15:04:35.542715|Jane      |Smith    |jane@example.com|2023-02-20 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.756+0000] {subprocess.py:93} INFO - |102       |1          |753966 |4       |2025-07-02 15:04:36.564243|John      |Doe      |john@example.com|2023-01-10 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.757+0000] {subprocess.py:93} INFO - |102       |1          |670645 |2       |2025-07-02 15:04:37.572615|John      |Doe      |john@example.com|2023-01-10 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.757+0000] {subprocess.py:93} INFO - |102       |1          |385734 |5       |2025-07-02 15:04:38.581473|John      |Doe      |john@example.com|2023-01-10 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.758+0000] {subprocess.py:93} INFO - |102       |2          |103247 |2       |2025-07-02 15:04:39.593414|Jane      |Smith    |jane@example.com|2023-02-20 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.758+0000] {subprocess.py:93} INFO - |101       |2          |545894 |1       |2025-07-02 15:04:40.607515|Jane      |Smith    |jane@example.com|2023-02-20 |Phone       |Electronics|699  |
+[2025-07-02T15:24:17.759+0000] {subprocess.py:93} INFO - |102       |2          |733037 |3       |2025-07-02 15:04:41.613731|Jane      |Smith    |jane@example.com|2023-02-20 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.761+0000] {subprocess.py:93} INFO - |102       |2          |113088 |1       |2025-07-02 15:04:42.617727|Jane      |Smith    |jane@example.com|2023-02-20 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.761+0000] {subprocess.py:93} INFO - |101       |2          |221241 |3       |2025-07-02 15:04:43.628259|Jane      |Smith    |jane@example.com|2023-02-20 |Phone       |Electronics|699  |
+[2025-07-02T15:24:17.762+0000] {subprocess.py:93} INFO - |102       |1          |181144 |2       |2025-07-02 15:04:44.64763 |John      |Doe      |john@example.com|2023-01-10 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.763+0000] {subprocess.py:93} INFO - |101       |1          |745348 |1       |2025-07-02 15:04:45.663991|John      |Doe      |john@example.com|2023-01-10 |Phone       |Electronics|699  |
+[2025-07-02T15:24:17.764+0000] {subprocess.py:93} INFO - |102       |1          |266150 |3       |2025-07-02 15:04:46.669977|John      |Doe      |john@example.com|2023-01-10 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.766+0000] {subprocess.py:93} INFO - |102       |2          |545638 |1       |2025-07-02 15:04:47.67814 |Jane      |Smith    |jane@example.com|2023-02-20 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.768+0000] {subprocess.py:93} INFO - |101       |2          |451114 |3       |2025-07-02 15:04:48.688484|Jane      |Smith    |jane@example.com|2023-02-20 |Phone       |Electronics|699  |
+[2025-07-02T15:24:17.769+0000] {subprocess.py:93} INFO - |101       |2          |723598 |4       |2025-07-02 15:04:49.694048|Jane      |Smith    |jane@example.com|2023-02-20 |Phone       |Electronics|699  |
+[2025-07-02T15:24:17.771+0000] {subprocess.py:93} INFO - |101       |1          |407967 |1       |2025-07-02 15:04:50.707439|John      |Doe      |john@example.com|2023-01-10 |Phone       |Electronics|699  |
+[2025-07-02T15:24:17.772+0000] {subprocess.py:93} INFO - |102       |1          |671069 |4       |2025-07-02 15:04:51.712361|John      |Doe      |john@example.com|2023-01-10 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.775+0000] {subprocess.py:93} INFO - |102       |1          |426792 |3       |2025-07-02 15:04:52.71986 |John      |Doe      |john@example.com|2023-01-10 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.777+0000] {subprocess.py:93} INFO - |101       |2          |342540 |3       |2025-07-02 15:04:53.731521|Jane      |Smith    |jane@example.com|2023-02-20 |Phone       |Electronics|699  |
+[2025-07-02T15:24:17.779+0000] {subprocess.py:93} INFO - |102       |1          |670722 |3       |2025-07-02 15:04:54.739531|John      |Doe      |john@example.com|2023-01-10 |Laptop      |Electronics|999  |
+[2025-07-02T15:24:17.781+0000] {subprocess.py:93} INFO - +----------+-----------+-------+--------+--------------------------+----------+---------+----------------+-----------+------------+-----------+-----+
+[2025-07-02T15:24:17.782+0000] {subprocess.py:93} INFO - only showing top 20 rows
+[2025-07-02T15:24:17.783+0000] {subprocess.py:93} INFO - 
+[2025-07-02T15:24:18.630+0000] {subprocess.py:93} INFO - 25/07/02 15:24:18 INFO AdminClientConfig: AdminClientConfig values:
+[2025-07-02T15:24:18.636+0000] {subprocess.py:93} INFO - 	auto.include.jmx.reporter = true
+[2025-07-02T15:24:18.637+0000] {subprocess.py:93} INFO - 	bootstrap.servers = [kafka:9093]
+[2025-07-02T15:24:18.637+0000] {subprocess.py:93} INFO - 	client.dns.lookup = use_all_dns_ips
+[2025-07-02T15:24:18.637+0000] {subprocess.py:93} INFO - 	client.id =
+[2025-07-02T15:24:18.637+0000] {subprocess.py:93} INFO - 	connections.max.idle.ms = 300000
+[2025-07-02T15:24:18.638+0000] {subprocess.py:93} INFO - 	default.api.timeout.ms = 60000
+[2025-07-02T15:24:18.638+0000] {subprocess.py:93} INFO - 	metadata.max.age.ms = 300000
+[2025-07-02T15:24:18.638+0000] {subprocess.py:93} INFO - 	metric.reporters = []
+[2025-07-02T15:24:18.638+0000] {subprocess.py:93} INFO - 	metrics.num.samples = 2
+[2025-07-02T15:24:18.638+0000] {subprocess.py:93} INFO - 	metrics.recording.level = INFO
+[2025-07-02T15:24:18.638+0000] {subprocess.py:93} INFO - 	metrics.sample.window.ms = 30000
+[2025-07-02T15:24:18.639+0000] {subprocess.py:93} INFO - 	receive.buffer.bytes = 65536
+[2025-07-02T15:24:18.639+0000] {subprocess.py:93} INFO - 	reconnect.backoff.max.ms = 1000
+[2025-07-02T15:24:18.639+0000] {subprocess.py:93} INFO - 	reconnect.backoff.ms = 50
+[2025-07-02T15:24:18.639+0000] {subprocess.py:93} INFO - 	request.timeout.ms = 30000
+[2025-07-02T15:24:18.639+0000] {subprocess.py:93} INFO - 	retries = 2147483647
+[2025-07-02T15:24:18.639+0000] {subprocess.py:93} INFO - 	retry.backoff.ms = 100
+[2025-07-02T15:24:18.640+0000] {subprocess.py:93} INFO - 	sasl.client.callback.handler.class = null
+[2025-07-02T15:24:18.640+0000] {subprocess.py:93} INFO - 	sasl.jaas.config = null
+[2025-07-02T15:24:18.640+0000] {subprocess.py:93} INFO - 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+[2025-07-02T15:24:18.641+0000] {subprocess.py:93} INFO - 	sasl.kerberos.min.time.before.relogin = 60000
+[2025-07-02T15:24:18.641+0000] {subprocess.py:93} INFO - 	sasl.kerberos.service.name = null
+[2025-07-02T15:24:18.642+0000] {subprocess.py:93} INFO - 	sasl.kerberos.ticket.renew.jitter = 0.05
+[2025-07-02T15:24:18.642+0000] {subprocess.py:93} INFO - 	sasl.kerberos.ticket.renew.window.factor = 0.8
+[2025-07-02T15:24:18.643+0000] {subprocess.py:93} INFO - 	sasl.login.callback.handler.class = null
+[2025-07-02T15:24:18.644+0000] {subprocess.py:93} INFO - 	sasl.login.class = null
+[2025-07-02T15:24:18.644+0000] {subprocess.py:93} INFO - 	sasl.login.connect.timeout.ms = null
+[2025-07-02T15:24:18.645+0000] {subprocess.py:93} INFO - 	sasl.login.read.timeout.ms = null
+[2025-07-02T15:24:18.646+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.buffer.seconds = 300
+[2025-07-02T15:24:18.646+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.min.period.seconds = 60
+[2025-07-02T15:24:18.647+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.window.factor = 0.8
+[2025-07-02T15:24:18.647+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.window.jitter = 0.05
+[2025-07-02T15:24:18.648+0000] {subprocess.py:93} INFO - 	sasl.login.retry.backoff.max.ms = 10000
+[2025-07-02T15:24:18.649+0000] {subprocess.py:93} INFO - 	sasl.login.retry.backoff.ms = 100
+[2025-07-02T15:24:18.650+0000] {subprocess.py:93} INFO - 	sasl.mechanism = GSSAPI
+[2025-07-02T15:24:18.651+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.clock.skew.seconds = 30
+[2025-07-02T15:24:18.651+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.expected.audience = null
+[2025-07-02T15:24:18.651+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.expected.issuer = null
+[2025-07-02T15:24:18.651+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+[2025-07-02T15:24:18.652+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+[2025-07-02T15:24:18.652+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+[2025-07-02T15:24:18.652+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.url = null
+[2025-07-02T15:24:18.652+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.scope.claim.name = scope
+[2025-07-02T15:24:18.652+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.sub.claim.name = sub
+[2025-07-02T15:24:18.653+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.token.endpoint.url = null
+[2025-07-02T15:24:18.653+0000] {subprocess.py:93} INFO - 	security.protocol = PLAINTEXT
+[2025-07-02T15:24:18.653+0000] {subprocess.py:93} INFO - 	security.providers = null
+[2025-07-02T15:24:18.654+0000] {subprocess.py:93} INFO - 	send.buffer.bytes = 131072
+[2025-07-02T15:24:18.655+0000] {subprocess.py:93} INFO - 	socket.connection.setup.timeout.max.ms = 30000
+[2025-07-02T15:24:18.655+0000] {subprocess.py:93} INFO - 	socket.connection.setup.timeout.ms = 10000
+[2025-07-02T15:24:18.655+0000] {subprocess.py:93} INFO - 	ssl.cipher.suites = null
+[2025-07-02T15:24:18.656+0000] {subprocess.py:93} INFO - 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+[2025-07-02T15:24:18.656+0000] {subprocess.py:93} INFO - 	ssl.endpoint.identification.algorithm = https
+[2025-07-02T15:24:18.656+0000] {subprocess.py:93} INFO - 	ssl.engine.factory.class = null
+[2025-07-02T15:24:18.657+0000] {subprocess.py:93} INFO - 	ssl.key.password = null
+[2025-07-02T15:24:18.657+0000] {subprocess.py:93} INFO - 	ssl.keymanager.algorithm = SunX509
+[2025-07-02T15:24:18.657+0000] {subprocess.py:93} INFO - 	ssl.keystore.certificate.chain = null
+[2025-07-02T15:24:18.657+0000] {subprocess.py:93} INFO - 	ssl.keystore.key = null
+[2025-07-02T15:24:18.658+0000] {subprocess.py:93} INFO - 	ssl.keystore.location = null
+[2025-07-02T15:24:18.659+0000] {subprocess.py:93} INFO - 	ssl.keystore.password = null
+[2025-07-02T15:24:18.659+0000] {subprocess.py:93} INFO - 	ssl.keystore.type = JKS
+[2025-07-02T15:24:18.659+0000] {subprocess.py:93} INFO - 	ssl.protocol = TLSv1.3
+[2025-07-02T15:24:18.659+0000] {subprocess.py:93} INFO - 	ssl.provider = null
+[2025-07-02T15:24:18.659+0000] {subprocess.py:93} INFO - 	ssl.secure.random.implementation = null
+[2025-07-02T15:24:18.660+0000] {subprocess.py:93} INFO - 	ssl.trustmanager.algorithm = PKIX
+[2025-07-02T15:24:18.660+0000] {subprocess.py:93} INFO - 	ssl.truststore.certificates = null
+[2025-07-02T15:24:18.660+0000] {subprocess.py:93} INFO - 	ssl.truststore.location = null
+[2025-07-02T15:24:18.660+0000] {subprocess.py:93} INFO - 	ssl.truststore.password = null
+[2025-07-02T15:24:18.661+0000] {subprocess.py:93} INFO - 	ssl.truststore.type = JKS
+[2025-07-02T15:24:18.661+0000] {subprocess.py:93} INFO - 
+[2025-07-02T15:24:18.667+0000] {subprocess.py:93} INFO - 25/07/02 15:24:18 INFO AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+[2025-07-02T15:24:18.667+0000] {subprocess.py:93} INFO - 25/07/02 15:24:18 INFO AppInfoParser: Kafka version: 3.5.1
+[2025-07-02T15:24:18.668+0000] {subprocess.py:93} INFO - 25/07/02 15:24:18 INFO AppInfoParser: Kafka commitId: 2c6fb6c54472e90a
+[2025-07-02T15:24:18.668+0000] {subprocess.py:93} INFO - 25/07/02 15:24:18 INFO AppInfoParser: Kafka startTimeMs: 1751469858666
+[2025-07-02T15:24:18.848+0000] {subprocess.py:93} INFO - 25/07/02 15:24:18 INFO AppInfoParser: App info kafka.admin.client for adminclient-3 unregistered
+[2025-07-02T15:24:18.858+0000] {subprocess.py:93} INFO - 25/07/02 15:24:18 INFO Metrics: Metrics scheduler closed
+[2025-07-02T15:24:18.861+0000] {subprocess.py:93} INFO - 25/07/02 15:24:18 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2025-07-02T15:24:18.862+0000] {subprocess.py:93} INFO - 25/07/02 15:24:18 INFO Metrics: Metrics reporters closed
+[2025-07-02T15:24:18.862+0000] {subprocess.py:93} INFO - 25/07/02 15:24:18 INFO KafkaRelation: GetBatch generating RDD of offset range: KafkaOffsetRange(transaction-events-0,-2,-1,None)
+[2025-07-02T15:24:19.177+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO FileSourceStrategy: Pushed Filters: IsNotNull(customer_id)
+[2025-07-02T15:24:19.183+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(customer_id#28)
+[2025-07-02T15:24:19.189+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO FileSourceStrategy: Pushed Filters: IsNotNull(product_id)
+[2025-07-02T15:24:19.189+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(product_id#38)
+[2025-07-02T15:24:19.614+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 203.0 KiB, free 433.5 MiB)
+[2025-07-02T15:24:19.615+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 203.1 KiB, free 433.5 MiB)
+[2025-07-02T15:24:19.710+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 35.6 KiB, free 433.5 MiB)
+[2025-07-02T15:24:19.714+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 35.7 KiB, free 433.5 MiB)
+[2025-07-02T15:24:19.731+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on ddb9a68c03a1:44557 (size: 35.6 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:19.748+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on ddb9a68c03a1:44557 (size: 35.7 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:19.756+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO SparkContext: Created broadcast 10 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+[2025-07-02T15:24:19.759+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO SparkContext: Created broadcast 9 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+[2025-07-02T15:24:19.800+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2025-07-02T15:24:19.806+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2025-07-02T15:24:19.973+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+[2025-07-02T15:24:19.989+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+[2025-07-02T15:24:19.991+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO DAGScheduler: Got job 5 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 1 output partitions
+[2025-07-02T15:24:19.994+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO DAGScheduler: Final stage: ResultStage 5 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+[2025-07-02T15:24:19.996+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO DAGScheduler: Parents of final stage: List()
+[2025-07-02T15:24:19.998+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO DAGScheduler: Missing parents: List()
+[2025-07-02T15:24:20.000+0000] {subprocess.py:93} INFO - 25/07/02 15:24:19 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[43] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+[2025-07-02T15:24:20.048+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 16.4 KiB, free 433.5 MiB)
+[2025-07-02T15:24:20.083+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 6.7 KiB, free 433.4 MiB)
+[2025-07-02T15:24:20.090+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on ddb9a68c03a1:44557 (size: 6.7 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:20.092+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1585
+[2025-07-02T15:24:20.098+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[43] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+[2025-07-02T15:24:20.100+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks resource profile 0
+[2025-07-02T15:24:20.113+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO DAGScheduler: Got job 6 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 1 output partitions
+[2025-07-02T15:24:20.127+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO DAGScheduler: Final stage: ResultStage 6 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+[2025-07-02T15:24:20.129+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 5) (172.18.0.10, executor 0, partition 0, PROCESS_LOCAL, 10325 bytes)
+[2025-07-02T15:24:20.132+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO DAGScheduler: Parents of final stage: List()
+[2025-07-02T15:24:20.139+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO DAGScheduler: Missing parents: List()
+[2025-07-02T15:24:20.147+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[44] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+[2025-07-02T15:24:20.163+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 17.0 KiB, free 433.4 MiB)
+[2025-07-02T15:24:20.196+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 6.8 KiB, free 433.4 MiB)
+[2025-07-02T15:24:20.200+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on ddb9a68c03a1:44557 (size: 6.8 KiB, free: 434.2 MiB)
+[2025-07-02T15:24:20.202+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1585
+[2025-07-02T15:24:20.204+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[44] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+[2025-07-02T15:24:20.206+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO TaskSchedulerImpl: Adding task set 6.0 with 1 tasks resource profile 0
+[2025-07-02T15:24:20.214+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 6) (172.18.0.10, executor 0, partition 0, PROCESS_LOCAL, 10326 bytes)
+[2025-07-02T15:24:20.468+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on 172.18.0.10:43297 (size: 6.8 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:20.482+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on 172.18.0.10:43297 (size: 6.7 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:20.688+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on 172.18.0.10:43297 (size: 35.7 KiB, free: 434.3 MiB)
+[2025-07-02T15:24:20.697+0000] {subprocess.py:93} INFO - 25/07/02 15:24:20 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on 172.18.0.10:43297 (size: 35.6 KiB, free: 434.2 MiB)
+[2025-07-02T15:24:21.206+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 6) in 985 ms on 172.18.0.10 (executor 0) (1/1)
+[2025-07-02T15:24:21.208+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool
+[2025-07-02T15:24:21.210+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 5) in 1091 ms on 172.18.0.10 (executor 0) (1/1)
+[2025-07-02T15:24:21.212+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool
+[2025-07-02T15:24:21.214+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO DAGScheduler: ResultStage 6 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 1.063 s
+[2025-07-02T15:24:21.228+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-07-02T15:24:21.233+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO TaskSchedulerImpl: Killing all running tasks in stage 6: Stage finished
+[2025-07-02T15:24:21.241+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO DAGScheduler: Job 6 finished: $anonfun$withThreadLocalCaptured$1 at <unknown>:0, took 1.282236 s
+[2025-07-02T15:24:21.244+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO DAGScheduler: ResultStage 5 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 1.210 s
+[2025-07-02T15:24:21.245+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-07-02T15:24:21.248+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO TaskSchedulerImpl: Killing all running tasks in stage 5: Stage finished
+[2025-07-02T15:24:21.253+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO DAGScheduler: Job 5 finished: $anonfun$withThreadLocalCaptured$1 at <unknown>:0, took 1.294052 s
+[2025-07-02T15:24:21.386+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 299.0 B, free 433.4 MiB)
+[2025-07-02T15:24:21.387+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 268.0 B, free 433.4 MiB)
+[2025-07-02T15:24:21.389+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on ddb9a68c03a1:44557 (size: 268.0 B, free: 434.2 MiB)
+[2025-07-02T15:24:21.391+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on ddb9a68c03a1:44557 (size: 299.0 B, free: 434.2 MiB)
+[2025-07-02T15:24:21.415+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO SparkContext: Created broadcast 14 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+[2025-07-02T15:24:21.417+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO SparkContext: Created broadcast 13 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+[2025-07-02T15:24:21.497+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO AdminClientConfig: AdminClientConfig values:
+[2025-07-02T15:24:21.498+0000] {subprocess.py:93} INFO - 	auto.include.jmx.reporter = true
+[2025-07-02T15:24:21.499+0000] {subprocess.py:93} INFO - 	bootstrap.servers = [kafka:9093]
+[2025-07-02T15:24:21.499+0000] {subprocess.py:93} INFO - 	client.dns.lookup = use_all_dns_ips
+[2025-07-02T15:24:21.500+0000] {subprocess.py:93} INFO - 	client.id =
+[2025-07-02T15:24:21.500+0000] {subprocess.py:93} INFO - 	connections.max.idle.ms = 300000
+[2025-07-02T15:24:21.500+0000] {subprocess.py:93} INFO - 	default.api.timeout.ms = 60000
+[2025-07-02T15:24:21.501+0000] {subprocess.py:93} INFO - 	metadata.max.age.ms = 300000
+[2025-07-02T15:24:21.502+0000] {subprocess.py:93} INFO - 	metric.reporters = []
+[2025-07-02T15:24:21.503+0000] {subprocess.py:93} INFO - 	metrics.num.samples = 2
+[2025-07-02T15:24:21.504+0000] {subprocess.py:93} INFO - 	metrics.recording.level = INFO
+[2025-07-02T15:24:21.505+0000] {subprocess.py:93} INFO - 	metrics.sample.window.ms = 30000
+[2025-07-02T15:24:21.505+0000] {subprocess.py:93} INFO - 	receive.buffer.bytes = 65536
+[2025-07-02T15:24:21.506+0000] {subprocess.py:93} INFO - 	reconnect.backoff.max.ms = 1000
+[2025-07-02T15:24:21.509+0000] {subprocess.py:93} INFO - 	reconnect.backoff.ms = 50
+[2025-07-02T15:24:21.510+0000] {subprocess.py:93} INFO - 	request.timeout.ms = 30000
+[2025-07-02T15:24:21.510+0000] {subprocess.py:93} INFO - 	retries = 2147483647
+[2025-07-02T15:24:21.511+0000] {subprocess.py:93} INFO - 	retry.backoff.ms = 100
+[2025-07-02T15:24:21.512+0000] {subprocess.py:93} INFO - 	sasl.client.callback.handler.class = null
+[2025-07-02T15:24:21.512+0000] {subprocess.py:93} INFO - 	sasl.jaas.config = null
+[2025-07-02T15:24:21.512+0000] {subprocess.py:93} INFO - 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+[2025-07-02T15:24:21.513+0000] {subprocess.py:93} INFO - 	sasl.kerberos.min.time.before.relogin = 60000
+[2025-07-02T15:24:21.514+0000] {subprocess.py:93} INFO - 	sasl.kerberos.service.name = null
+[2025-07-02T15:24:21.514+0000] {subprocess.py:93} INFO - 	sasl.kerberos.ticket.renew.jitter = 0.05
+[2025-07-02T15:24:21.514+0000] {subprocess.py:93} INFO - 	sasl.kerberos.ticket.renew.window.factor = 0.8
+[2025-07-02T15:24:21.514+0000] {subprocess.py:93} INFO - 	sasl.login.callback.handler.class = null
+[2025-07-02T15:24:21.514+0000] {subprocess.py:93} INFO - 	sasl.login.class = null
+[2025-07-02T15:24:21.515+0000] {subprocess.py:93} INFO - 	sasl.login.connect.timeout.ms = null
+[2025-07-02T15:24:21.515+0000] {subprocess.py:93} INFO - 	sasl.login.read.timeout.ms = null
+[2025-07-02T15:24:21.515+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.buffer.seconds = 300
+[2025-07-02T15:24:21.516+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.min.period.seconds = 60
+[2025-07-02T15:24:21.516+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.window.factor = 0.8
+[2025-07-02T15:24:21.517+0000] {subprocess.py:93} INFO - 	sasl.login.refresh.window.jitter = 0.05
+[2025-07-02T15:24:21.518+0000] {subprocess.py:93} INFO - 	sasl.login.retry.backoff.max.ms = 10000
+[2025-07-02T15:24:21.518+0000] {subprocess.py:93} INFO - 	sasl.login.retry.backoff.ms = 100
+[2025-07-02T15:24:21.519+0000] {subprocess.py:93} INFO - 	sasl.mechanism = GSSAPI
+[2025-07-02T15:24:21.520+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.clock.skew.seconds = 30
+[2025-07-02T15:24:21.520+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.expected.audience = null
+[2025-07-02T15:24:21.521+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.expected.issuer = null
+[2025-07-02T15:24:21.521+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+[2025-07-02T15:24:21.522+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+[2025-07-02T15:24:21.523+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+[2025-07-02T15:24:21.523+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.jwks.endpoint.url = null
+[2025-07-02T15:24:21.524+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.scope.claim.name = scope
+[2025-07-02T15:24:21.524+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.sub.claim.name = sub
+[2025-07-02T15:24:21.524+0000] {subprocess.py:93} INFO - 	sasl.oauthbearer.token.endpoint.url = null
+[2025-07-02T15:24:21.524+0000] {subprocess.py:93} INFO - 	security.protocol = PLAINTEXT
+[2025-07-02T15:24:21.525+0000] {subprocess.py:93} INFO - 	security.providers = null
+[2025-07-02T15:24:21.525+0000] {subprocess.py:93} INFO - 	send.buffer.bytes = 131072
+[2025-07-02T15:24:21.526+0000] {subprocess.py:93} INFO - 	socket.connection.setup.timeout.max.ms = 30000
+[2025-07-02T15:24:21.526+0000] {subprocess.py:93} INFO - 	socket.connection.setup.timeout.ms = 10000
+[2025-07-02T15:24:21.527+0000] {subprocess.py:93} INFO - 	ssl.cipher.suites = null
+[2025-07-02T15:24:21.528+0000] {subprocess.py:93} INFO - 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+[2025-07-02T15:24:21.529+0000] {subprocess.py:93} INFO - 	ssl.endpoint.identification.algorithm = https
+[2025-07-02T15:24:21.529+0000] {subprocess.py:93} INFO - 	ssl.engine.factory.class = null
+[2025-07-02T15:24:21.530+0000] {subprocess.py:93} INFO - 	ssl.key.password = null
+[2025-07-02T15:24:21.530+0000] {subprocess.py:93} INFO - 	ssl.keymanager.algorithm = SunX509
+[2025-07-02T15:24:21.531+0000] {subprocess.py:93} INFO - 	ssl.keystore.certificate.chain = null
+[2025-07-02T15:24:21.532+0000] {subprocess.py:93} INFO - 	ssl.keystore.key = null
+[2025-07-02T15:24:21.532+0000] {subprocess.py:93} INFO - 	ssl.keystore.location = null
+[2025-07-02T15:24:21.532+0000] {subprocess.py:93} INFO - 	ssl.keystore.password = null
+[2025-07-02T15:24:21.533+0000] {subprocess.py:93} INFO - 	ssl.keystore.type = JKS
+[2025-07-02T15:24:21.533+0000] {subprocess.py:93} INFO - 	ssl.protocol = TLSv1.3
+[2025-07-02T15:24:21.533+0000] {subprocess.py:93} INFO - 	ssl.provider = null
+[2025-07-02T15:24:21.534+0000] {subprocess.py:93} INFO - 	ssl.secure.random.implementation = null
+[2025-07-02T15:24:21.534+0000] {subprocess.py:93} INFO - 	ssl.trustmanager.algorithm = PKIX
+[2025-07-02T15:24:21.535+0000] {subprocess.py:93} INFO - 	ssl.truststore.certificates = null
+[2025-07-02T15:24:21.535+0000] {subprocess.py:93} INFO - 	ssl.truststore.location = null
+[2025-07-02T15:24:21.535+0000] {subprocess.py:93} INFO - 	ssl.truststore.password = null
+[2025-07-02T15:24:21.536+0000] {subprocess.py:93} INFO - 	ssl.truststore.type = JKS
+[2025-07-02T15:24:21.536+0000] {subprocess.py:93} INFO - 
+[2025-07-02T15:24:21.537+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+[2025-07-02T15:24:21.537+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO AppInfoParser: Kafka version: 3.5.1
+[2025-07-02T15:24:21.537+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO AppInfoParser: Kafka commitId: 2c6fb6c54472e90a
+[2025-07-02T15:24:21.538+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO AppInfoParser: Kafka startTimeMs: 1751469861518
+[2025-07-02T15:24:21.645+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO AppInfoParser: App info kafka.admin.client for adminclient-4 unregistered
+[2025-07-02T15:24:21.651+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO Metrics: Metrics scheduler closed
+[2025-07-02T15:24:21.652+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2025-07-02T15:24:21.654+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO Metrics: Metrics reporters closed
+[2025-07-02T15:24:21.655+0000] {subprocess.py:93} INFO - 25/07/02 15:24:21 INFO KafkaRelation: GetBatch generating RDD of offset range: KafkaOffsetRange(transaction-events-0,-2,-1,None)
+[2025-07-02T15:24:22.445+0000] {subprocess.py:93} INFO - 25/07/02 15:24:22 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2025-07-02T15:24:22.458+0000] {subprocess.py:93} INFO - 25/07/02 15:24:22 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2025-07-02T15:24:22.459+0000] {subprocess.py:93} INFO - 25/07/02 15:24:22 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+[2025-07-02T15:24:23.716+0000] {subprocess.py:93} INFO - 25/07/02 15:24:23 INFO CodeGenerator: Code generated in 671.873751 ms
+[2025-07-02T15:24:23.887+0000] {subprocess.py:93} INFO - 25/07/02 15:24:23 INFO SparkContext: Starting job: csv at <unknown>:0
+[2025-07-02T15:24:23.898+0000] {subprocess.py:93} INFO - 25/07/02 15:24:23 INFO DAGScheduler: Got job 7 (csv at <unknown>:0) with 1 output partitions
+[2025-07-02T15:24:23.900+0000] {subprocess.py:93} INFO - 25/07/02 15:24:23 INFO DAGScheduler: Final stage: ResultStage 7 (csv at <unknown>:0)
+[2025-07-02T15:24:23.916+0000] {subprocess.py:93} INFO - 25/07/02 15:24:23 INFO DAGScheduler: Parents of final stage: List()
+[2025-07-02T15:24:23.917+0000] {subprocess.py:93} INFO - 25/07/02 15:24:23 INFO DAGScheduler: Missing parents: List()
+[2025-07-02T15:24:23.918+0000] {subprocess.py:93} INFO - 25/07/02 15:24:23 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[55] at csv at <unknown>:0), which has no missing parents
+[2025-07-02T15:24:24.173+0000] {subprocess.py:93} INFO - 25/07/02 15:24:24 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 258.9 KiB, free 433.2 MiB)
+[2025-07-02T15:24:24.211+0000] {subprocess.py:93} INFO - 25/07/02 15:24:24 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 93.3 KiB, free 433.1 MiB)
+[2025-07-02T15:24:24.219+0000] {subprocess.py:93} INFO - 25/07/02 15:24:24 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on ddb9a68c03a1:44557 (size: 93.3 KiB, free: 434.2 MiB)
+[2025-07-02T15:24:24.221+0000] {subprocess.py:93} INFO - 25/07/02 15:24:24 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1585
+[2025-07-02T15:24:24.239+0000] {subprocess.py:93} INFO - 25/07/02 15:24:24 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[55] at csv at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+[2025-07-02T15:24:24.240+0000] {subprocess.py:93} INFO - 25/07/02 15:24:24 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks resource profile 0
+[2025-07-02T15:24:24.288+0000] {subprocess.py:93} INFO - 25/07/02 15:24:24 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 7) (172.18.0.10, executor 0, partition 0, PROCESS_LOCAL, 9844 bytes)
+[2025-07-02T15:24:24.591+0000] {subprocess.py:93} INFO - 25/07/02 15:24:24 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on 172.18.0.10:43297 (size: 93.3 KiB, free: 434.2 MiB)
+[2025-07-02T15:24:26.329+0000] {subprocess.py:93} INFO - 25/07/02 15:24:26 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on 172.18.0.10:43297 (size: 299.0 B, free: 434.2 MiB)
+[2025-07-02T15:24:26.488+0000] {subprocess.py:93} INFO - 25/07/02 15:24:26 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on 172.18.0.10:43297 (size: 268.0 B, free: 434.2 MiB)
+[2025-07-02T15:24:29.236+0000] {subprocess.py:93} INFO - 25/07/02 15:24:29 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 7) in 4958 ms on 172.18.0.10 (executor 0) (1/1)
+[2025-07-02T15:24:29.252+0000] {subprocess.py:93} INFO - 25/07/02 15:24:29 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool
+[2025-07-02T15:24:29.253+0000] {subprocess.py:93} INFO - 25/07/02 15:24:29 INFO DAGScheduler: ResultStage 7 (csv at <unknown>:0) finished in 5.291 s
+[2025-07-02T15:24:29.253+0000] {subprocess.py:93} INFO - 25/07/02 15:24:29 INFO DAGScheduler: Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-07-02T15:24:29.253+0000] {subprocess.py:93} INFO - 25/07/02 15:24:29 INFO TaskSchedulerImpl: Killing all running tasks in stage 7: Stage finished
+[2025-07-02T15:24:29.253+0000] {subprocess.py:93} INFO - 25/07/02 15:24:29 INFO DAGScheduler: Job 7 finished: csv at <unknown>:0, took 5.362630 s
+[2025-07-02T15:24:29.267+0000] {subprocess.py:93} INFO - 25/07/02 15:24:29 INFO FileFormatWriter: Start to commit write Job 58d6212e-e3f4-454e-9b3d-f71f7ebc7022.
+[2025-07-02T15:24:29.662+0000] {subprocess.py:93} INFO - 25/07/02 15:24:29 INFO FileFormatWriter: Write Job 58d6212e-e3f4-454e-9b3d-f71f7ebc7022 committed. Elapsed time: 383 ms.
+[2025-07-02T15:24:29.718+0000] {subprocess.py:93} INFO - 25/07/02 15:24:29 INFO FileFormatWriter: Finished processing stats for write job 58d6212e-e3f4-454e-9b3d-f71f7ebc7022.
+[2025-07-02T15:24:29.777+0000] {subprocess.py:93} INFO - 25/07/02 15:24:29 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2025-07-02T15:24:29.987+0000] {subprocess.py:93} INFO - 25/07/02 15:24:29 INFO SparkUI: Stopped Spark web UI at http://ddb9a68c03a1:4040
+[2025-07-02T15:24:30.012+0000] {subprocess.py:93} INFO - 25/07/02 15:24:30 INFO StandaloneSchedulerBackend: Shutting down all executors
+[2025-07-02T15:24:30.021+0000] {subprocess.py:93} INFO - 25/07/02 15:24:30 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Asking each executor to shut down
+[2025-07-02T15:24:30.208+0000] {subprocess.py:93} INFO - 25/07/02 15:24:30 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2025-07-02T15:24:30.627+0000] {subprocess.py:93} INFO - 25/07/02 15:24:30 INFO MemoryStore: MemoryStore cleared
+[2025-07-02T15:24:30.640+0000] {subprocess.py:93} INFO - 25/07/02 15:24:30 INFO BlockManager: BlockManager stopped
+[2025-07-02T15:24:30.654+0000] {subprocess.py:93} INFO - 25/07/02 15:24:30 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2025-07-02T15:24:30.675+0000] {subprocess.py:93} INFO - 25/07/02 15:24:30 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2025-07-02T15:24:30.965+0000] {subprocess.py:93} INFO - 25/07/02 15:24:30 INFO SparkContext: Successfully stopped SparkContext
+[2025-07-02T15:24:31.581+0000] {subprocess.py:93} INFO - 25/07/02 15:24:31 INFO ShutdownHookManager: Shutdown hook called
+[2025-07-02T15:24:31.586+0000] {subprocess.py:93} INFO - 25/07/02 15:24:31 INFO ShutdownHookManager: Deleting directory /tmp/spark-a366e9a2-2762-44f1-884a-592909837c17/pyspark-a4c1228a-6761-422d-a227-92399ee17329
+[2025-07-02T15:24:31.692+0000] {subprocess.py:93} INFO - 25/07/02 15:24:31 INFO ShutdownHookManager: Deleting directory /tmp/spark-a366e9a2-2762-44f1-884a-592909837c17
+[2025-07-02T15:24:31.760+0000] {subprocess.py:93} INFO - 25/07/02 15:24:31 INFO ShutdownHookManager: Deleting directory /tmp/spark-ae1c0ce1-ad53-4d37-a8ff-590e06821f03
+[2025-07-02T15:24:32.328+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-07-02T15:24:32.747+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=retail_sales_pipeline, task_id=run_spark_job, execution_date=20250702T151439, start_date=20250702T152248, end_date=20250702T152432
+[2025-07-02T15:24:32.890+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2025-07-02T15:24:33.181+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

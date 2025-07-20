@@ -1,0 +1,81 @@
+[2025-07-02T15:05:27.994+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: retail_sales_pipeline.run_spark_job manual__2025-07-02T15:04:29.536749+00:00 [queued]>
+[2025-07-02T15:05:28.040+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: retail_sales_pipeline.run_spark_job manual__2025-07-02T15:04:29.536749+00:00 [queued]>
+[2025-07-02T15:05:28.041+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-02T15:05:28.042+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2025-07-02T15:05:28.043+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-02T15:05:28.138+0000] {taskinstance.py:1304} INFO - Executing <Task(DockerOperator): run_spark_job> on 2025-07-02 15:04:29.536749+00:00
+[2025-07-02T15:05:28.196+0000] {standard_task_runner.py:55} INFO - Started process 212 to run task
+[2025-07-02T15:05:28.206+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'retail_sales_pipeline', 'run_spark_job', 'manual__2025-07-02T15:04:29.536749+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/retail_sales_pipeline.py', '--cfg-path', '/tmp/tmp71vfr7a0']
+[2025-07-02T15:05:28.222+0000] {standard_task_runner.py:83} INFO - Job 3: Subtask run_spark_job
+[2025-07-02T15:05:28.707+0000] {task_command.py:389} INFO - Running <TaskInstance: retail_sales_pipeline.run_spark_job manual__2025-07-02T15:04:29.536749+00:00 [running]> on host febdae18cce2
+[2025-07-02T15:05:29.168+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=retail_sales_pipeline
+AIRFLOW_CTX_TASK_ID=run_spark_job
+AIRFLOW_CTX_EXECUTION_DATE=2025-07-02T15:04:29.536749+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-07-02T15:04:29.536749+00:00
+[2025-07-02T15:05:29.346+0000] {docker.py:284} INFO - Starting docker container from image custom-spark:latest
+[2025-07-02T15:05:29.401+0000] {docker.py:295} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2025-07-02T15:05:29.451+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http+docker://localhost/v1.48/containers/create?name=spark-master
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/docker/operators/docker.py", line 291, in _run_image
+    return self._run_image_with_mounts(self.mounts + [tmp_mount], add_tmp_variable=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/docker/operators/docker.py", line 344, in _run_image_with_mounts
+    tty=self.tty,
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/container.py", line 431, in create_container
+    return self.create_container_from_config(config, name, platform)
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/container.py", line 448, in create_container_from_config
+    return self._result(res, True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/client.py", line 274, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 400 Client Error for http+docker://localhost/v1.48/containers/create?name=spark-master: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /host_mnt/private/tmp/airflowtmpk8h0u8ho")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 409 Client Error: Conflict for url: http+docker://localhost/v1.48/containers/create?name=spark-master
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/docker/operators/docker.py", line 430, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/docker/operators/docker.py", line 300, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/docker/operators/docker.py", line 344, in _run_image_with_mounts
+    tty=self.tty,
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/container.py", line 431, in create_container
+    return self.create_container_from_config(config, name, platform)
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/container.py", line 448, in create_container_from_config
+    return self._result(res, True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/client.py", line 274, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 409 Client Error for http+docker://localhost/v1.48/containers/create?name=spark-master: Conflict ("Conflict. The container name "/spark-master" is already in use by container "ddb9a68c03a1f73978a98b93d605cd303a416f55e8359ce3504d28a529433360". You have to remove (or rename) that container to be able to reuse that name.")
+[2025-07-02T15:05:29.597+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=retail_sales_pipeline, task_id=run_spark_job, execution_date=20250702T150429, start_date=20250702T150528, end_date=20250702T150529
+[2025-07-02T15:05:29.673+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 3 for task run_spark_job (409 Client Error for http+docker://localhost/v1.48/containers/create?name=spark-master: Conflict ("Conflict. The container name "/spark-master" is already in use by container "ddb9a68c03a1f73978a98b93d605cd303a416f55e8359ce3504d28a529433360". You have to remove (or rename) that container to be able to reuse that name."); 212)
+[2025-07-02T15:05:29.720+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2025-07-02T15:05:29.843+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

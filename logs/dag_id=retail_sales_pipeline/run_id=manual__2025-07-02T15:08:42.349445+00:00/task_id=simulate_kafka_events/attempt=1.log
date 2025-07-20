@@ -1,0 +1,34 @@
+[2025-07-02T15:14:14.999+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: retail_sales_pipeline.simulate_kafka_events manual__2025-07-02T15:08:42.349445+00:00 [queued]>
+[2025-07-02T15:14:15.101+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: retail_sales_pipeline.simulate_kafka_events manual__2025-07-02T15:08:42.349445+00:00 [queued]>
+[2025-07-02T15:14:15.104+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-02T15:14:15.107+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2025-07-02T15:14:15.108+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-02T15:14:15.182+0000] {taskinstance.py:1304} INFO - Executing <Task(BashOperator): simulate_kafka_events> on 2025-07-02 15:08:42.349445+00:00
+[2025-07-02T15:14:15.274+0000] {standard_task_runner.py:55} INFO - Started process 323 to run task
+[2025-07-02T15:14:15.289+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'retail_sales_pipeline', 'simulate_kafka_events', 'manual__2025-07-02T15:08:42.349445+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/retail_sales_pipeline.py', '--cfg-path', '/tmp/tmp_qhxkak1']
+[2025-07-02T15:14:15.299+0000] {standard_task_runner.py:83} INFO - Job 6: Subtask simulate_kafka_events
+[2025-07-02T15:14:15.737+0000] {task_command.py:389} INFO - Running <TaskInstance: retail_sales_pipeline.simulate_kafka_events manual__2025-07-02T15:08:42.349445+00:00 [running]> on host febdae18cce2
+[2025-07-02T15:14:16.132+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=retail_sales_pipeline
+AIRFLOW_CTX_TASK_ID=simulate_kafka_events
+AIRFLOW_CTX_EXECUTION_DATE=2025-07-02T15:08:42.349445+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-07-02T15:08:42.349445+00:00
+[2025-07-02T15:14:16.136+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-07-02T15:14:16.142+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n        docker exec broker             python3 /opt/***/scripts/ingestion/kafka_producer.py\n        ']
+[2025-07-02T15:14:16.198+0000] {subprocess.py:86} INFO - Output:
+[2025-07-02T15:14:16.624+0000] {subprocess.py:93} INFO - Error: No such container: broker
+[2025-07-02T15:14:16.629+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-07-02T15:14:16.737+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-07-02T15:14:16.747+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=retail_sales_pipeline, task_id=simulate_kafka_events, execution_date=20250702T150842, start_date=20250702T151415, end_date=20250702T151416
+[2025-07-02T15:14:16.820+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 6 for task simulate_kafka_events (Bash command failed. The command returned a non-zero exit code 1.; 323)
+[2025-07-02T15:14:16.865+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2025-07-02T15:14:17.000+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
